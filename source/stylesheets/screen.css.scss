@@ -37,7 +37,7 @@ html, body {
 
 a {
   color: #74bc1c;
-  font-weight: 600;
+  //font-weight: 600;
 
   &:hover {
     color: #5fa307;
@@ -90,7 +90,7 @@ ul {
   background-color: $nav-bg;
   border-right: 1px solid $nav-border-right;
   font-size: $nav-item-font-size;
-  font-weight: bold;
+  font-weight: 500;
 
   // language selector for mobile devices
   .lang-selector {
@@ -333,15 +333,15 @@ ul {
 .lang-selector {
   background-color: $lang-select-bg;
   width: 100%;
-  font-weight: bold;
   a {
     display: block;
     float:left;
     color: $lang-select-text;
     text-decoration: none;
-    padding: 8px 16px;
+    padding: 8px 20px;
     line-height: 30px;
-    font-size: 18px;
+    font-size: $lang-selector-font-size;
+    font-weight: 400;
     outline: 0;
 
     &:active, &:focus {
@@ -399,7 +399,8 @@ ul {
 
   h1 {
     @extend %header-font;
-    font-size: 30px;
+    font-size: 36px;
+    font-weight: 400;
     padding-top: 1em;
     padding-bottom: 0.5em;
     //border-bottom: 1px solid #ccc;
@@ -417,7 +418,8 @@ ul {
 
   h2 {
     @extend %header-font;
-    font-size: 20px;
+    font-size: 24px;
+    font-weight: 400;
     margin-top: 3em;
     margin-bottom: 0;
     //border-top: 1px solid #ccc;
@@ -456,7 +458,7 @@ ul {
     th,td {
       text-align: left;
       vertical-align: top;
-      line-height: 1.6;
+      line-height: 1.5;
     }
 
     th {
@@ -491,7 +493,7 @@ ul {
   }
 
   p, li, dt, dd {
-    line-height: 1.6;
+    line-height: 1.5;
     margin-top: 0;
   }
 
@@ -519,7 +521,7 @@ ul {
     margin-top: 1.5em;
     margin-bottom: 1.5em;
     background: $aside-notice-bg;
-    line-height: 1.6;
+    line-height: 1.5;
 
     &.warning {
       background-color: $aside-warning-bg;
@@ -535,7 +537,7 @@ ul {
   aside:before {
     vertical-align: middle;
     padding-right: 0.5em;
-    font-size: 14px;
+    font-size: $aside-font-size;
   }
 
   aside.notice:before {

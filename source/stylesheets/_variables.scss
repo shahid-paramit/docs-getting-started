@@ -65,16 +65,18 @@ $h1-margin-bottom: 21px !default; // padding under the largest header tags
 $tablet-width: 930px !default; // min width before reverting to tablet size
 $phone-width: $tablet-width - $nav-width !default; // min width before reverting to mobile size
 $nav-item-font-size: 18px;
-$nav-subitem-font-size: 14px;
-$nav-search-font-size: 14px;
-$nav-search-results-font-size: 14px;
-$nav-footer-font-size: 14px;
+$nav-subitem-font-size: 16px;
+$nav-search-font-size: 16px;
+$nav-search-results-font-size: 16px;
+$nav-footer-font-size: 16px;
+$aside-font-size: 16px;
+$lang-selector-font-size: 18px;
 
 // FONTS
 ////////////////////
 %default-font {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
-  font-size: 14px;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
+  font-size: 16px;
 }
 
 %header-font {
