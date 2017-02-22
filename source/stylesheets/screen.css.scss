@@ -44,6 +44,10 @@ a {
   }
 }
 
+ul {
+  list-style-type: disc;
+}
+
 .flex { display: -webkit-box; display: -ms-flexbox; display: flex; }
 .flex-none { -webkit-box-flex: 0; -ms-flex: none; flex: none; }
 .flex-fill { flex: 1 1; min-width: 0; min-height: 0; }
@@ -85,7 +89,7 @@ a {
   width: $nav-width;
   background-color: $nav-bg;
   border-right: 1px solid $nav-border-right;
-  font-size: 18px;
+  font-size: $nav-item-font-size;
   font-weight: bold;
 
   // language selector for mobile devices
@@ -98,15 +102,10 @@ a {
   }
 
   // This is the logo at the top of the ToC
-  &>img {
+  &>.img-logo img {
     display: block;
     max-width: 100%;
-    //position: fixed;
-    //background: #ffffff;
-    //border-right: 1px solid $nav-border-right;
-    //z-index: 31;
-    //top: 0;
-    //left: 0;
+    margin: 9px 13px;
   }
 
   &>.search {
@@ -218,7 +217,7 @@ a {
     font-weight: 500;
     .tocify-item>a {
       padding-left: $nav-padding + $nav-indent;
-      font-size: 13px;
+      font-size: $nav-subitem-font-size;
     }
 
     // for embossed look:
@@ -480,7 +479,7 @@ a {
   }
 
   p, li, dt, dd {
-    line-height: 1.8;
+    line-height: 1.6;
     margin-top: 0;
   }
 

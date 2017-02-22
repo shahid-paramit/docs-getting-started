@@ -64,15 +64,17 @@ $code-annotation-padding: 13px !default; // padding inside code annotations
 $h1-margin-bottom: 21px !default; // padding under the largest header tags
 $tablet-width: 930px !default; // min width before reverting to tablet size
 $phone-width: $tablet-width - $nav-width !default; // min width before reverting to mobile size
-$nav-search-results-font-size: 13px;
-$nav-search-font-size: 13px;
-$nav-footer-font-size: 13px;
+$nav-item-font-size: 18px;
+$nav-subitem-font-size: 14px;
+$nav-search-font-size: 14px;
+$nav-search-results-font-size: 14px;
+$nav-footer-font-size: 14px;
 
 // FONTS
 ////////////////////
 %default-font {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 %header-font {
