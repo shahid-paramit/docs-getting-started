@@ -35,6 +35,13 @@ html, body {
   -webkit-text-size-adjust: none; /* Never autoresize text */
 }
 
+.flex { display: -webkit-box; display: -ms-flexbox; display: flex; }
+.flex-none { -webkit-box-flex: 0; -ms-flex: none; flex: none; }
+.flex-fill { flex: 1 1; min-width: 0; min-height: 0; }
+.flex-column { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+.flex-row { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; }
+.overflow-y-auto { overflow-y: auto; }
+
 ////////////////////////////////////////////////////////////////////////////////
 // TABLE OF CONTENTS
 ////////////////////////////////////////////////////////////////////////////////
@@ -65,7 +72,7 @@ html, body {
   top: 0;
   left: 0;
   bottom: 0;
-  margin-top: 60px;
+  //margin-top: 60px;
   width: $nav-width;
   background-color: $nav-bg;
   border-right: 1px solid $nav-border-right;
@@ -85,12 +92,12 @@ html, body {
   &>img {
     display: block;
     max-width: 100%;
-    position: fixed;
-    background: #ffffff;
-    border-right: 1px solid $nav-border-right;
-    z-index: 31;
-    top: 0;
-    left: 0;
+    //position: fixed;
+    //background: #ffffff;
+    //border-right: 1px solid $nav-border-right;
+    //z-index: 31;
+    //top: 0;
+    //left: 0;
   }
 
   &>.search {
@@ -237,6 +244,7 @@ html, body {
     display: block;
     padding: 14px;
     background-color: rgba($main-bg, 0.7);
+    //background-image: linear-gradient(to right, $main-bg, rgba($main-bg, 0.5));
     border-radius: 0 0 0 5px;
   }
   padding: 0 1.5em 5em 0; // increase touch size area
@@ -378,6 +386,7 @@ html, body {
   h1:first-child, div:first-child + h1 {
     border-top-width: 0;
     margin-top: 0;
+    padding-top: 0.5em;
   }
 
   h2 {
