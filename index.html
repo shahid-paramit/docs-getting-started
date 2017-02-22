@@ -97,18 +97,22 @@
         <img src="images/navbar.png" alt="Navbar" />
       </span>
     </a>
-    <div class="tocify-wrapper">
-      <img src="logo.png" alt="Logo" />
-        <div class="lang-selector">
-              <a href="#" data-language-name="Shell">Shell</a>
-              <a href="#" data-language-name="Python">Python</a>
-              <a href="#" data-language-name="Javascript">Javascript</a>
-        </div>
-      <div id="toc">
+    <div class="tocify-wrapper flex flex-column">
+      <div class="flex-none">
+        <img src="logo.png" alt="Logo" />
       </div>
-        <ul class="toc-footer">
-            <li><a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a></li>
-        </ul>
+      <div class="flex-fill overflow-y-auto">
+          <div class="lang-selector">
+                <a href="#" data-language-name="Shell">Shell</a>
+                <a href="#" data-language-name="Python">Python</a>
+                <a href="#" data-language-name="Javascript">Javascript</a>
+          </div>
+        <div id="toc">
+        </div>
+          <ul class="toc-footer">
+              <li><a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a></li>
+          </ul>
+      </div>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
