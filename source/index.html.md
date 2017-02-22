@@ -6,9 +6,6 @@ language_tabs:
   - Python
   - Javascript
 
-toc_footers:
-  - <a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a>
-
 includes:
   - overview
   - api
