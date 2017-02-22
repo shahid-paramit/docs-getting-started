@@ -7,7 +7,6 @@ language_tabs:
   - Javascript
 
 toc_footers:
-  - <a href='https://www.flex.io/app/signup'>Sign Up for Flex.io</a>
   - <a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a>
 
 includes:
