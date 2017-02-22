@@ -625,13 +625,6 @@ html, body {
       left: 0;
       margin: 0 20px;
     }
-
-    blockquote {
-      &>p {
-        color: $main-text;
-        text-shadow: none;
-      }
-    }
   }
 }
 
@@ -659,6 +652,15 @@ html, body {
 
   %right-col + %left-col {
     margin-top: $main-padding;
+  }
+
+  .content {
+    blockquote {
+      &>p {
+        color: $main-text;
+        text-shadow: none;
+      }
+    }
   }
 }
 
