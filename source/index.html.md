@@ -11,4 +11,5 @@ toc_footers:
 
 includes:
   - overview
+  - api
 ---
