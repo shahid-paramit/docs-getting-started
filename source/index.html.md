@@ -2,10 +2,9 @@
 title: API Reference
 
 language_tabs:
-  - shell
-  - ruby
-  - python
-  - javascript
+  - Shell
+  - Python
+  - Javascript
 
 toc_footers:
   - <a href='https://www.flex.io/app/signup'>Sign Up for Flex.io</a>

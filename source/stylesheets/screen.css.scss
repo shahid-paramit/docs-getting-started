@@ -65,6 +65,7 @@ html, body {
   top: 0;
   left: 0;
   bottom: 0;
+  margin-top: 60px;
   width: $nav-width;
   background-color: $nav-bg;
   border-right: 1px solid $nav-border-right;
@@ -84,6 +85,12 @@ html, body {
   &>img {
     display: block;
     max-width: 100%;
+    position: fixed;
+    background: #ffffff;
+    border-right: 1px solid $nav-border-right;
+    z-index: 31;
+    top: 0;
+    left: 0;
   }
 
   &>.search {
