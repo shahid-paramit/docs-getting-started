@@ -368,7 +368,7 @@ html, body {
     font-size: 30px;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
-    border-bottom: 1px solid #ccc;
+    //border-bottom: 1px solid #ccc;
     margin-bottom: $h1-margin-bottom;
     margin-top: 2em;
     border-top: 1px solid #ddd;
@@ -383,9 +383,9 @@ html, body {
   h2 {
     @extend %header-font;
     font-size: 20px;
-    margin-top: 4em;
+    margin-top: 3em;
     margin-bottom: 0;
-    border-top: 1px solid #ccc;
+    //border-top: 1px solid #ccc;
     padding-top: 1.2em;
     padding-bottom: 1.2em;
     background-image: linear-gradient(to bottom, rgba(#fff, 0.4), rgba(#fff, 0));
