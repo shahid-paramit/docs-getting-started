@@ -1,6 +1,6 @@
 # Overview
 
-## Getting Started 2
+## Getting Started
 
 > To return basic status information about the current user, enter the following:
 
