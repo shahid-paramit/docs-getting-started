@@ -7,6 +7,7 @@
     <title>Flex.io API Reference</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.6.2/tachyons.min.css">
     <style>
       .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
@@ -93,23 +94,31 @@
   </head>
 
   <body class="index" data-languages="[&quot;Shell&quot;,&quot;Python&quot;,&quot;Javascript&quot;]">
-    <a href="#" id="nav-button">
-      <span>
-        <img src="images/navbar.png" alt="Navbar" />
-      </span>
-    </a>
-    <div class="tocify-wrapper flex flex-column">
-      <div class="flex-none img-logo">
-        <img src="logo.png" alt="Logo" />
+    <div class="css-header fixed top-0 w-100 flex flex-row items-center bg-white bb b--black-10" style="padding: 10px 40px 10px 10px">
+      <div class="flex-none">
+        <a href="#" id="nav-button" class="db">
+          <span>
+            <img src="images/navbar.png" alt="Navbar" />
+          </span>
+        </a>
       </div>
-      <div class="flex-fill overflow-y-auto">
-          <div class="lang-selector">
-                <a href="#" data-language-name="Shell">Shell</a>
-                <a href="#" data-language-name="Python">Python</a>
-                <a href="#" data-language-name="Javascript">Javascript</a>
-          </div>
-        <div id="toc">
+      <div class="flex-none">
+        <img src="logo.png" class="db" alt="Logo" />
+      </div>
+      <div class="flex-fill">&nbsp;</div>
+      <div class="flex-none">
+        <a href="#" class="mh2 ph1 min-w5 css-nav-link">Getting Started</a>
+        <a href="#" class="mh2 ph1 min-w5 css-nav-link css-nav-active">API Reference</a>
+        <a href="#" class="mh2 ph1 min-w5 css-nav-link">Examples</a>
+      </div>
+    </div>
+    <div class="tocify-wrapper br b--black-10">
+        <div class="lang-selector">
+              <a href="#" data-language-name="Shell">Shell</a>
+              <a href="#" data-language-name="Python">Python</a>
+              <a href="#" data-language-name="Javascript">Javascript</a>
         </div>
+      <div id="toc">
       </div>
     </div>
     <div class="page-wrapper">
@@ -157,6 +166,18 @@
 <li>set the content type to JSON: &ldquo;Content-Type: application/json; charset=utf-8&rdquo;</li>
 </ul></li>
 </ol>
+
+<aside class="notice">
+You can use either a <code>*</code> or a <code>-</code> to create bulleted lists.
+</aside>
+
+<aside class="warning">
+You can also tell the user that this is something bad to do&hellip;.
+</aside>
+
+<aside class="success">
+&hellip;or that this is something good to do. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id erat bibendum, rutrum justo ac, venenatis metus. Morbi lobortis lacinia tellus, ut gravida mi elementum sed. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+</aside>
 
 <h2 id="authentication">Authentication</h2>
 
