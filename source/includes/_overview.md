@@ -34,6 +34,18 @@ To begin using the API, do the following:
    - set the Authorization header to your API key: "Authorization: Bearer [[app:Authorization]]"
    - set the content type to JSON: "Content-Type: application/json; charset=utf-8"
 
+<aside class="notice">
+You can use either a <code>*</code> or a <code>-</code> to create bulleted lists.
+</aside>
+
+<aside class="warning">
+You can also tell the user that this is something bad to do....
+</aside>
+
+<aside class="success">
+...or that this is something good to do. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id erat bibendum, rutrum justo ac, venenatis metus. Morbi lobortis lacinia tellus, ut gravida mi elementum sed. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+</aside>
+
 ## Authentication
 
 All API calls use the following root: https://www.flex.io/api/v1/

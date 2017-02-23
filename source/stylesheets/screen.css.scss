@@ -546,21 +546,24 @@ ul {
   }
 
   aside:before {
-    vertical-align: middle;
+    vertical-align: top;
     padding-right: 0.5em;
-    font-size: $aside-font-size;
+    font-size: 24px;
   }
 
   aside.notice:before {
     @extend %icon-info-sign;
+    color: darken($aside-notice-bg, 30%);
   }
 
   aside.warning:before {
     @extend %icon-exclamation-sign;
+    color: darken($aside-warning-bg, 30%);
   }
 
   aside.success:before {
     @extend %icon-ok-sign;
+    color: darken($aside-success-bg, 30%);
   }
 
   .search-highlight {
