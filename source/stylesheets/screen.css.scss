@@ -41,7 +41,6 @@ body {
 
 a {
   color: $fx-green;
-  //font-weight: 600;
 
   &:hover {
     color: darken($fx-green, 5%);
@@ -70,6 +69,8 @@ ul {
     color: $header-text;
     text-decoration: none;
     font-size: 18px;
+    border-bottom: 2px solid transparent;
+    transition: border 0.3s ease-in-out;
 
     &:hover,
     &.css-nav-active {
@@ -537,8 +538,7 @@ ul {
   }
 
   aside {
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding: 1em 1em 1em 4em;
     text-shadow: 0 1px 0 lighten($aside-notice-bg, 15%);
     margin-top: 1.5em;
     margin-bottom: 1.5em;
@@ -558,8 +558,10 @@ ul {
 
   aside:before {
     vertical-align: top;
-    padding-right: 0.5em;
     font-size: 24px;
+    width: 2em;
+    margin-left: -1.75em;
+    padding-right: 0.5em;
   }
 
   aside.notice:before {
