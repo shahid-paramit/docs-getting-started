@@ -35,6 +35,10 @@ html, body {
   -webkit-text-size-adjust: none; /* Never autoresize text */
 }
 
+body {
+  margin-top: $header-height;
+}
+
 a {
   color: #74bc1c;
   //font-weight: 600;
@@ -53,6 +57,14 @@ ul {
   flex: 1 1;
   min-width: 0;
   min-height: 0;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// HEADER
+////////////////////////////////////////////////////////////////////////////////
+
+.css-header {
+  z-index: 100;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -82,12 +94,11 @@ ul {
   overflow-x: hidden;
   position: fixed;
   z-index: 30;
-  top: 0;
+  top: $header-height;
   left: 0;
   bottom: 0;
   width: $nav-width;
   background-color: $nav-bg;
-  border-right: 1px solid $nav-border-right;
   font-size: $nav-item-font-size;
   font-weight: 500;
 
@@ -95,8 +106,9 @@ ul {
   .lang-selector {
     display: none;
     a {
-      padding-top: 0.5em;
-      padding-bottom: 0.5em;
+      padding-left: $nav-padding;
+      padding-right: $nav-padding;
+      float: none;
     }
   }
 
@@ -173,7 +185,7 @@ ul {
 
   .tocify-item>a, .toc-footer li {
     color: #333;
-    padding: 0 $nav-padding 0 $nav-padding;
+    padding: 0 $nav-padding;
     display: block;
     overflow-x: hidden;
     white-space: nowrap;

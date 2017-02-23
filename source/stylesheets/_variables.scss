@@ -53,6 +53,7 @@ $lang-select-pressed-text: #fff !default; // color of language tab text when mou
 
 // SIZES
 ////////////////////
+$header-height: 61px !default;
 $nav-width: 230px !default; // width of the navbar
 $examples-width: 50% !default; // portion of the screen taken up by code examples
 $logo-margin: 20px !default; // margin between nav items and logo, ignored if search is active
@@ -94,7 +95,6 @@ $lang-selector-font-size: 18px;
 // OTHER
 ////////////////////
 $nav-active-shadow: none !default;
-$nav-border-right: rgba(0,0,0,0.1) !default;
 $nav-footer-border-color: #ddd !default;
 $nav-embossed-border-top: #000 !default;
 $nav-embossed-border-bottom: #939393 !default;

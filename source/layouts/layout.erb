@@ -37,7 +37,25 @@ under the License.
   </head>
 
   <body class="<%= page_classes %>" data-languages="<%=h language_tabs.map{ |lang| lang.is_a?(Hash) ? lang.keys.first : lang }.to_json %>">
-    <div class="tocify-wrapper">
+    <div class="css-header fixed top-0 w-100 flex flex-row items-center bg-white bb b--black-10" style="padding: 10px 40px 10px 10px">
+      <div class="flex-none">
+        <a href="#" id="nav-button" class="db">
+          <span>
+            <%= image_tag('navbar.png') %>
+          </span>
+        </a>
+      </div>
+      <div class="flex-none">
+        <%= image_tag("logo.png", class: 'db') %>
+      </div>
+      <div class="flex-fill">&nbsp;</div>
+      <div class="flex-none">
+        <a href="#" class="pa2">Test</a>
+        <a href="#" class="pa2">Test</a>
+        <a href="#" class="pa2">Test</a>
+      </div>
+    </div>
+    <div class="tocify-wrapper br b--black-10">
       <% if language_tabs.any? %>
         <div class="lang-selector">
           <% language_tabs.each do |lang| %>
