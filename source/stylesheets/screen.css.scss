@@ -48,6 +48,14 @@ ul {
   list-style-type: disc;
 }
 
+/* From Tachyons */
+.db { display: block; }
+.dib { display: inline-block; }
+.static { position: static; }
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+.absolute--fill { top: 0; right: 0; bottom: 0; left: 0; }
 .flex { display: -webkit-box; display: -ms-flexbox; display: flex; }
 .flex-none { -webkit-box-flex: 0; -ms-flex: none; flex: none; }
 .flex-fill { flex: 1 1; min-width: 0; min-height: 0; }
@@ -80,7 +88,7 @@ ul {
 
   overflow-y: auto;
   overflow-x: hidden;
-  position: fixed;
+  position: absolute;
   z-index: 30;
   top: 0;
   left: 0;
@@ -267,17 +275,18 @@ ul {
 #nav-button {
   span {
     display: block;
-    padding: 14px;
+    padding: 4px;
+    margin-right: 8px;
     background-color: rgba($main-bg, 0.7);
     //background-image: linear-gradient(to right, $main-bg, rgba($main-bg, 0.5));
     border-radius: 0 0 0 5px;
   }
-  padding: 0 1.5em 5em 0; // increase touch size area
+  //padding: 0 1.5em 5em 0; // increase touch size area
   display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
+  //position: fixed;
+  //top: 0;
+  //left: 0;
+  //z-index: 100;
   color: #000;
   text-decoration: none;
   font-weight: bold;
