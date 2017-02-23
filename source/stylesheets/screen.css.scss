@@ -218,10 +218,9 @@ ul {
   .tocify-focus {
     box-shadow: 0px 1px 0px $nav-active-shadow;
     background-color: $nav-active-bg;
-    color: $nav-active-text;
 
     &>a {
-      color: #fff;
+      color: $nav-active-text;
 
       &:hover {
         text-decoration: none;
