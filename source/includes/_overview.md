@@ -39,7 +39,7 @@ You can use either a <code>*</code> or a <code>-</code> to create bulleted lists
 </aside>
 
 <aside class="warning">
-You can also tell the user that this is something bad to do....
+You can also tell the user that this is something bad to do...
 </aside>
 
 <aside class="success">
