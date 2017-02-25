@@ -245,6 +245,98 @@ You can also tell the user that this is something bad to do&hellip;
 </tr>
 </tbody></table>
 
+          <h1 id="getting-started-with-flex-io">Getting Started with Flex.io</h1>
+
+<p>This is a simple tutorial on how to build a pipe with Flex.io. In this example we will build a pipe that will grab all of the files in a Github folder and output the to a Dropbox folder.</p>
+
+<p>Here&rsquo;s how to do it</p>
+
+<p>First, make a new pipe by clicking the <strong>New Pipe</strong> button</p>
+
+<p><insert image of new pipe modal></p>
+
+<p>This will open the <strong>New Pipe</strong> modal. If you&rsquo;d like, you can name the pipe here and add a description. When you&rsquo;re done click <strong>Web Link</strong> to select the type of input connection you&rsquo;d like to use.</p>
+
+<p><insert image of the next step: file chooser></p>
+
+<p>This is the file chooser step for the pipe. You can skip this step by clicking the <strong>Create Pipe</strong> button, but for our example, we&rsquo;ll specify a couple of files from a Github repository.</p>
+
+<p>We&rsquo;ll use some data from our friends at fivethirtyeight who provide all of the data on Github for the articles they write.</p>
+
+<p>(image)
+https://github.com/fivethirtyeight/data/tree/master/presidential-campaign-trail</p>
+
+<p>To get the URL for the raw files, we&rsquo;ll do the following:
+  * Click on each file we want
+  * Click the <strong>Raw</strong> button
+  * Copy the URL from the browser window into the file chooser in Flex.io.</p>
+
+<p>Once we&rsquo;re done adding the URLs we want for our pipe input, click the <strong>Create Pipe</strong> button.</p>
+
+<p>Our pipe has been created. Double-click on the pipe to open the pipe builder view.</p>
+
+<p><insert image of pipe builder></p>
+
+<p>We can see the input tile for this pipe which has the URLs we enter. Run the pipe by click the <strong>Run Pipe</strong> button.</p>
+
+<p>Once the pipe has been run, you&rsquo;ll see the two files listed in the input list and their corresponding data file in the content area</p>
+
+<p>Clicking on each file in the input list will show the preview of that file in the content area.</p>
+
+<p>At this point, our pipe doesn&rsquo;t do a whole lot, so let&rsquo;s add a step to change the data a bit.</p>
+
+<p>Click the <strong>+</strong> tile to the right of the input tile to add a step.</p>
+
+<p>Type <code class="prettyprint">convert</code> into the command bar below the pipe tiles and then click the <strong>save</strong> button in the command bar. This will convert the files into tables.</p>
+
+<aside class="notice">
+The <code>convert</code> command is a shorthand which converts a text-delimited file into a table using standard choices for CSV files. The verbose syntax for this command would be <code>convert from: delimited to: table delimiter: comma qualifier: double-quote header: true</code>.
+</aside>
+
+<p>Type <code class="prettyprint">transform case: upper</code> into the command bar and press <code>Ctrl+Enter</code></p>
+
+<aside class="notice">
+Pressing <code>Ctrl+Enter</code> is an easy way to save the step and update the pipe without having to click the <b>Save</b> button in the command bar.
+</aside>
+
+<p><image of table with transform column highlighted></p>
+
+<p>We can see the result of this step in the table in the content area. The <code class="prettyprint">location</code> column has been converted to all capital letters.</p>
+
+<p>The final step is to output these files to a folder in Dropbox.</p>
+
+<p>Clikc the <strong>Add Output</strong> tile in the pipe list to open the output file chooser.</p>
+
+<p><image of output file chooser></p>
+
+<p>Since we&rsquo;re just getting started, we&rsquo;ll need to set up a connection to our Dropbox account. Click <strong>Dropbox</strong> to configure the connection. This will open the *<em>New Connection *</em> modal.</p>
+
+<p>Click on the <strong>Authenticate your Dropbox account</strong> button and enter your Dropbox username and password.</p>
+
+<aside class="notice">
+This information is out submitted to Dropbox! Flex.io does not store your password for Dropbox, Google Drive or any other connections which use OAuth.
+</aside>
+
+<p>Once you&rsquo;ve entered your username and password, the window should close and your should see a message that says &ldquo;You&rsquo;ve successfully connected to Dropbox!&rdquo;.</p>
+
+<p>Click the <strong>Create Connection</strong> button. The <strong>New Connection</strong> modal will close and the <strong>Output File Chooser</strong> modal will open up.</p>
+
+<p><image of output folder chooser></p>
+
+<p>Select the folded you&rsquo;d like to output the files to by either double-clicking on the folders in the file list or typing the folder name in the &ldquo;Output folder&rdquo; text box.</p>
+
+<p>Click the <strong>Done</strong> button.</p>
+
+<p>Click the <strong>Save</strong> button in the command bar.</p>
+
+<aside class="notice">
+Pipes will only output to when formally running the pipe. In order for our output get piped to Dropbox, we need to click the <b>Run Pipe</b> button.
+</aside>
+
+<p>Click the <strong>Run Pipe</strong> button.</p>
+
+<p>Open up Dropbox folder to see the files there.</p>
+
       </div>
       <div class="dark-box">
           <div class="lang-selector">
