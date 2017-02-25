@@ -9,4 +9,5 @@ language_tabs:
 includes:
   - overview
   - api
+  - getting-started
 ---
