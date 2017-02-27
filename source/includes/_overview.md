@@ -1,6 +1,8 @@
 # Overview
 
-## Getting Started
+## Getting Started 2
+
+### Test Heading 3
 
 > To return basic status information about the current user, enter the following:
 
