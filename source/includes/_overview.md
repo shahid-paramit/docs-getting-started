@@ -4,15 +4,11 @@
 
 ### Test Heading 3
 
-> To return basic status information about the current user, enter the following:
-
 ```shell
 curl -X GET 'https://www.flex.io/api/v1/status'
 -H "Authorization: Bearer [[app:Authorization]]"
 -H "Content-Type: application/json; charset=utf-8"
 ```
-
-> The above command returns JSON structured like this:
 
 ```json
 {
