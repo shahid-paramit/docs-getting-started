@@ -25,6 +25,7 @@ under the License.
 
 html, body {
   color: $main-text;
+  font-size: $p-font-size;
   padding: 0;
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -68,7 +69,7 @@ ul {
   .css-nav-link {
     color: $header-text;
     text-decoration: none;
-    font-size: 18px;
+    font-size: $header-font-size;
     border-bottom: 2px solid transparent;
     transition: border 0.3s ease-in-out;
 
@@ -219,7 +220,7 @@ ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    line-height: 40px;
+    line-height: 36px;
   }
 
   li {
@@ -416,13 +417,13 @@ ul {
   }
 
   // the div is the tocify hidden div for placeholding stuff
-  &>h1, &>h2, &>div {
+  &>h1, &>h2, &>h3, &>div {
     clear:both;
   }
 
   h1 {
     @extend %header-font;
-    font-size: 36px;
+    font-size: $h1-font-size;
     font-weight: 400;
     padding-top: 1em;
     padding-bottom: 0.5em;
@@ -441,7 +442,7 @@ ul {
 
   h2 {
     @extend %header-font;
-    font-size: 24px;
+    font-size: $h2-font-size;
     font-weight: 400;
     margin-top: 3em;
     margin-bottom: 0;
@@ -460,13 +461,35 @@ ul {
 
   h3, h4, h5, h6 {
     @extend %header-font;
-    font-size: 15px;
-    margin-top: 2.5em;
+    padding-top: 2.5em;
     margin-bottom: 0.8em;
   }
 
-  h4, h5, h6 {
-    font-size: 10px;
+  h3 {
+    font-size: $h3-font-size;
+    font-weight: 400;
+  }
+
+  h4 {
+    font-size: $h4-font-size;
+    font-weight: 400;
+  }
+
+  h5 {
+    font-size: $h5-font-size;
+  }
+
+  h6 {
+    font-size: $h6-font-size;
+  }
+
+  h1 + blockquote,
+  h2 + blockquote,
+  h3 + blockquote,
+  h4 + blockquote,
+  h5 + blockquote,
+  h6 + blockquote {
+    padding-top: 0;
   }
 
   hr {
@@ -558,7 +581,7 @@ ul {
 
   aside:before {
     vertical-align: top;
-    font-size: 24px;
+    font-size: $aside-icon-font-size;
     width: 2em;
     margin-left: -1.75em;
     padding-right: 0.5em;
