@@ -4,5 +4,10 @@ title: Flex.io API Reference
 language_tabs:
 
 includes:
-  - overview
+  - welcome
+  - tour
+  - cli
+  - examples-pipe
+  - examples-cli
+  - faq
 ---
