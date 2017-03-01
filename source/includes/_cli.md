@@ -7,7 +7,7 @@ The Flex.io Command Line Interface (CLI) is a tool used to manage your Flex.io r
 If you use a Mac or want to install via npm (on Windows, Mac, or Linux), you can install using the following command
 
 ```
-$ npm install flexio
+$ npm install -g flexio
 ```
 
 If you use a Windows or Linux computer, the following binary installation packages are available for download:
@@ -19,7 +19,7 @@ If you use a Windows or Linux computer, the following binary installation packag
 
 ## Source Code
 
-The source code is available on Github.  Download it or view it [here](https://github.com/flexiodata):  
+The source code is available on Github.  Download it or view it [here](https://github.com/flexiodata):
 
 ## Configure
 
