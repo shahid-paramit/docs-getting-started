@@ -73,6 +73,10 @@ ul {
     border-bottom: 2px solid transparent;
     transition: border 0.3s ease-in-out;
 
+    &.css-nav-active {
+      cursor: default;
+    }
+
     &:hover,
     &.css-nav-active {
       border-bottom: 2px solid $fx-green;
