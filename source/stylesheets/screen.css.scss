@@ -670,6 +670,56 @@ ul {
 }
 
 ////////////////////////////////////////////////////////////////////////////////
+// SINGLE COLUMN LAYOUT (NO RIGHT COLUMN)
+////////////////////////////////////////////////////////////////////////////////
+
+// add this class to the .page-wrapper element to force
+// a single column layout (in addition to the left nav)
+.single-column {
+  .dark-box {
+    display: none;
+  }
+
+  %left-col {
+    margin-right: 0;
+  }
+
+  .tocify-wrapper .lang-selector {
+    display: block;
+  }
+
+  .page-wrapper .lang-selector {
+    display: none;
+  }
+
+  %right-col {
+    width: auto;
+    float: none;
+  }
+
+  %right-col + %left-col {
+    margin-top: $main-padding;
+  }
+
+  .content {
+    pre, blockquote {
+      position: static;
+      left: 0;
+      margin: 0 28px;
+    }
+  }
+
+  .content {
+    blockquote {
+      &>p {
+        color: $main-text;
+        text-shadow: none;
+      }
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////
 // RESPONSIVE DESIGN
 ////////////////////////////////////////////////////////////////////////////////
 // These are the styles for phones and tablets
@@ -730,6 +780,14 @@ ul {
 
   %right-col + %left-col {
     margin-top: $main-padding;
+  }
+
+  .content {
+    pre, blockquote {
+      position: static;
+      left: 0;
+      margin: 0 28px;
+    }
   }
 
   .content {
