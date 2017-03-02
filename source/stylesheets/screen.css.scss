@@ -213,7 +213,7 @@ ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    line-height: 2.5;
+    line-height: 2.4;
   }
 
   li {
@@ -245,7 +245,22 @@ ul {
     font-weight: 400;
     .tocify-item > a {
       padding-left: $nav-padding + $nav-indent;
-      font-size: $nav-subitem-font-size;
+      font-size: $nav-subitem-font-size - 1;
+    }
+  }
+
+  // Third-level subheader
+  .tocify-subheader {
+    .tocify-subheader {
+      .tocify-item > a {
+        &:before {
+          content: '-';
+          margin-right: 4px;
+        }
+
+        padding-left: $nav-padding + ($nav-indent * 2);
+        font-size: $nav-subitem-font-size - 3;
+      }
     }
   }
 
