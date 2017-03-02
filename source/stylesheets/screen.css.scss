@@ -513,12 +513,8 @@ ul {
       padding: 0.6rem;
     }
 
-    tr:nth-child(odd) > td {
-      background-color: lighten($main-bg,4.2%);
-    }
-
     tr:nth-child(even) > td {
-      background-color: lighten($main-bg,2.4%);
+      background-color: #f8f8f8;
     }
   }
 
@@ -544,8 +540,8 @@ ul {
   }
 
   code {
-    background-color: rgba(0,0,0,0.1);
-    padding: 3px 4px;
+    background-color: rgba(0,0,0,0.075);
+    padding: 3px;
     border-radius: 3px;
     @extend %break-words;
     @extend %code-font;
