@@ -23,7 +23,8 @@ under the License.
 // GENERAL STUFF
 ////////////////////////////////////////////////////////////////////////////////
 
-html, body {
+html,
+body {
   color: $main-text;
   background-color: $main-bg;
   font-size: $p-font-size;
@@ -153,7 +154,8 @@ ul {
     }
   }
 
-  img+.tocify, .lang-selector+.tocify {
+  img + .tocify,
+  .lang-selector + .tocify {
     margin-top: $logo-margin;
   }
 
@@ -189,7 +191,8 @@ ul {
     }
   }
 
-  .tocify-item > a, .toc-footer li {
+  .tocify-item > a,
+  .toc-footer li {
     color: #333;
     padding: 0 $nav-padding;
     display: block;
@@ -209,7 +212,8 @@ ul {
   // The Table of Contents is composed of multiple nested
   // unordered lists.  These styles remove the default
   // styling of an unordered list because it is ugly.
-  ul, li {
+  ul,
+  li {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -295,30 +299,18 @@ ul {
     padding: 4px;
     margin-right: 8px;
     background-color: rgba($main-bg, 0.7);
-    //background-image: linear-gradient(to right, $main-bg, rgba($main-bg, 0.5));
     border-radius: 0 0 0 5px;
   }
-  //padding: 0 1.5em 5em 0; // increase touch size area
   display: none;
-  //position: fixed;
-  //top: 0;
-  //left: 0;
-  //z-index: 100;
   color: #000;
   text-decoration: none;
   font-weight: bold;
   opacity: 0.7;
   line-height: 16px;
 
-  //img {
-  //  height: 16px;
-  //  vertical-align: bottom;
-  //}
-
   transition: left 0.3s ease-in-out;
 
   &:hover { opacity: 1; }
-  //&.open {left: $nav-width}
 }
 
 
@@ -370,7 +362,8 @@ ul {
     font-weight: 400;
     outline: 0;
 
-    &:active, &:focus {
+    &:active,
+    &:focus {
       background-color: $lang-select-pressed-bg;
       color: $lang-select-pressed-text;
     }
@@ -404,7 +397,18 @@ ul {
     clear: both;
   }
 
-  & > h1, & > h2, & > h3, & > h4, & > h5, & > h6, & > p, & > table, & > ul, & > ol, & > aside, & > dl {
+  & > h1,
+  & > h2,
+  & > h3,
+  & > h4,
+  & > h5,
+  & > h6,
+  & > p,
+  & > table,
+  & > ul,
+  & > ol,
+  & > aside,
+  & > dl {
     margin-right: $examples-width;
     padding: 0 $main-padding;
     box-sizing: border-box;
@@ -413,12 +417,28 @@ ul {
     @extend %left-col;
   }
 
-  & > ul, & > ol {
-    padding-left: $main-padding + 15px;
+  & > ul,
+  & > ol {
+    padding-left: $main-padding + 18px;
+  }
+
+  & ul > li,
+  & ol > li {
+    & > ul,
+    & > ol {
+      padding-left: $main-padding;
+    }
+
+    > p {
+      margin: 0;
+    }
   }
 
   // the div is the tocify hidden div for placeholding stuff
-  & > h1, & > h2, & > h3, & > div {
+  & > h1,
+  & > h2,
+  & > h3,
+  & > div {
     clear:both;
   }
 
@@ -432,7 +452,8 @@ ul {
     margin-bottom: $h1-margin-bottom;
   }
 
-  h1:first-child, div:first-child + h1 {
+  h1:first-child,
+  div:first-child + h1 {
     margin-top: 4rem;
   }
 
@@ -448,12 +469,16 @@ ul {
 
   // h2s right after h1s should bump right up
   // against the h1s.
-  h1 + h2, h1 + div + h2 {
+  h1 + h2,
+  h1 + div + h2 {
     margin-top: $h1-margin-bottom * -1;
     border-top: none;
   }
 
-  h3, h4, h5, h6 {
+  h3,
+  h4,
+  h5,
+  h6 {
     @extend %header-font;
     padding-top: 1rem;
     margin-bottom: 0.8rem;
@@ -526,7 +551,10 @@ ul {
     margin-left: 15px;
   }
 
-  p, li, dt, dd {
+  p,
+  li,
+  dt,
+  dd {
     line-height: 1.6;
     margin-top: 0;
   }
@@ -610,7 +638,8 @@ ul {
 // This is all the stuff that appears in the right half of the page
 
 .content {
-  pre, blockquote {
+  pre,
+  blockquote {
     //background-color: $code-bg;
     color: #fff;
 
@@ -688,7 +717,8 @@ ul {
   .content {
     max-width: 900px;
 
-    pre, blockquote {
+    pre,
+    blockquote {
       position: static;
       left: 0;
       margin: 0 28px;
@@ -739,7 +769,8 @@ ul {
   }
 
   .content {
-    pre, blockquote {
+    pre,
+    blockquote {
       position: static;
       left: 0;
       margin: 0 28px;
@@ -780,7 +811,8 @@ ul {
   }
 
   .content {
-    pre, blockquote {
+    pre,
+    blockquote {
       position: static;
       left: 0;
       margin: 0 28px;
@@ -802,10 +834,14 @@ ul {
   }
 }
 
-.highlight .c, .highlight .cm, .highlight .c1, .highlight .cs {
+.highlight .c,
+.highlight .cm,
+.highlight .c1,
+.highlight .cs {
   color: #909090;
 }
 
-.highlight, .highlight .w {
+.highlight,
+.highlight .w {
   background-color: $code-bg;
 }
