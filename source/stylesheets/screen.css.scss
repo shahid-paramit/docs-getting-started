@@ -25,15 +25,15 @@ under the License.
 
 html, body {
   color: $main-text;
+  background-color: $main-bg;
   font-size: $p-font-size;
   padding: 0;
   margin: 0;
+  height: 100%;
+  @extend %default-font;
+  -webkit-text-size-adjust: none; /* Never autoresize text */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  @extend %default-font;
-  background-color: $main-bg;
-  height: 100%;
-  -webkit-text-size-adjust: none; /* Never autoresize text */
 }
 
 body {
@@ -88,20 +88,11 @@ ul {
 // TABLE OF CONTENTS
 ////////////////////////////////////////////////////////////////////////////////
 
-#toc > ul > li > a > span {
+#toc  >  ul  >  li  >  a  >  span {
   float: right;
   background-color: #2484FF;
   border-radius: 40px;
   width: 20px;
-}
-
-@mixin embossed-bg {
-  background:
-    linear-gradient(to bottom, rgba(#000, 0.2), rgba(#000, 0) 8px),
-    linear-gradient(to top, rgba(#000, 0.2), rgba(#000, 0) 8px),
-    linear-gradient(to bottom, rgba($nav-embossed-border-top, 1), rgba($nav-embossed-border-top, 0) 1.5px),
-    linear-gradient(to top, rgba($nav-embossed-border-bottom, 1), rgba($nav-embossed-border-bottom, 0) 1.5px),
-    $nav-subitem-bg;
 }
 
 .tocify-wrapper {
@@ -130,13 +121,13 @@ ul {
   }
 
   // This is the logo at the top of the ToC
-  &>.img-logo img {
+  & > .img-logo img {
     display: block;
     max-width: 100%;
     margin: 9px 13px;
   }
 
-  &>.search {
+  & > .search {
     position: relative;
 
     input {
@@ -168,6 +159,7 @@ ul {
 
   .search-results {
     margin-top: 0;
+    background-color: $nav-search-results-bg-color;
     box-sizing: border-box;
     height: 0;
     overflow-y: auto;
@@ -175,13 +167,11 @@ ul {
     transition-property: height, margin;
     transition-duration: 180ms;
     transition-timing-function: ease-in-out;
+
     &.visible {
       height: 30%;
       margin-bottom: 1em;
     }
-
-    background-color: $nav-search-results-bg-color;
-    //@include embossed-bg;
 
     li {
       margin: 1em $nav-padding;
@@ -199,8 +189,7 @@ ul {
     }
   }
 
-
-  .tocify-item>a, .toc-footer li {
+  .tocify-item > a, .toc-footer li {
     color: #333;
     padding: 0 $nav-padding;
     display: block;
@@ -209,7 +198,7 @@ ul {
     text-overflow: ellipsis;
   }
 
-  .tocify-item>a {
+  .tocify-item > a {
     text-decoration: none;
 
     &:hover {
@@ -224,7 +213,7 @@ ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    line-height: 36px;
+    line-height: 2.5;
   }
 
   li {
@@ -239,7 +228,7 @@ ul {
     box-shadow: 0px 1px 0px $nav-active-shadow;
     background-color: $nav-active-bg;
 
-    &>a {
+    & > a {
       color: $nav-active-text;
 
       &:hover {
@@ -253,16 +242,10 @@ ul {
   .tocify-subheader {
     display: none; // tocify will override this when needed
     //background-color: $nav-subitem-bg;
-    font-weight: 500;
-    .tocify-item>a {
+    font-weight: 400;
+    .tocify-item > a {
       padding-left: $nav-padding + $nav-indent;
       font-size: $nav-subitem-font-size;
-    }
-
-    // for embossed look:
-    //@include embossed-bg;
-    &>li:last-child {
-      box-shadow: none; // otherwise it'll overflow out of the subheader
     }
   }
 
@@ -283,7 +266,7 @@ ul {
 
     li {
       font-size: 0.8em;
-      line-height: 1.7;
+      line-height: 1.6;
       text-decoration: none;
     }
   }
@@ -406,22 +389,21 @@ ul {
     clear: both;
   }
 
-  &>h1, &>h2, &>h3, &>h4, &>h5, &>h6, &>p, &>table, &>ul, &>ol, &>aside, &>dl {
+  & > h1, & > h2, & > h3, & > h4, & > h5, & > h6, & > p, & > table, & > ul, & > ol, & > aside, & > dl {
     margin-right: $examples-width;
     padding: 0 $main-padding;
     box-sizing: border-box;
     display: block;
-    text-shadow: $main-embossed-text-shadow;
 
     @extend %left-col;
   }
 
-  &>ul, &>ol {
+  & > ul, & > ol {
     padding-left: $main-padding + 15px;
   }
 
   // the div is the tocify hidden div for placeholding stuff
-  &>h1, &>h2, &>h3, &>div {
+  & > h1, & > h2, & > h3, & > div {
     clear:both;
   }
 
@@ -429,31 +411,24 @@ ul {
     @extend %header-font;
     font-size: $h1-font-size;
     font-weight: 400;
-    padding-top: 1em;
-    padding-bottom: 0.5em;
-    //border-bottom: 1px solid #ccc;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 4rem;
     margin-bottom: $h1-margin-bottom;
-    margin-top: 3em;
-    border-top: 1px solid #ddd;
-    //background-image: linear-gradient(to bottom, #fff, #f9f9f9);
   }
 
   h1:first-child, div:first-child + h1 {
-    border-top-width: 0;
-    margin-top: 0;
-    padding-top: 0.5em;
+    margin-top: 4rem;
   }
 
   h2 {
     @extend %header-font;
     font-size: $h2-font-size;
     font-weight: 400;
-    margin-top: 3em;
+    padding-top: 1rem;
+    padding-bottom: 0.8rem;
+    margin-top: 2rem;
     margin-bottom: 0;
-    //border-top: 1px solid #ccc;
-    padding-top: 1.2em;
-    padding-bottom: 1.2em;
-    //background-image: linear-gradient(to bottom, rgba(#fff, 0.4), rgba(#fff, 0));
   }
 
   // h2s right after h1s should bump right up
@@ -465,8 +440,8 @@ ul {
 
   h3, h4, h5, h6 {
     @extend %header-font;
-    padding-top: 2.5em;
-    margin-bottom: 0.8em;
+    padding-top: 1rem;
+    margin-bottom: 0.8rem;
   }
 
   h3 {
@@ -505,31 +480,29 @@ ul {
   table {
     margin-bottom: 1em;
     overflow: auto;
+
     th,td {
       text-align: left;
       vertical-align: top;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
     th {
-      padding: 5px 10px;
+      padding: 0.4rem 0.6rem;
       border-bottom: 1px solid #ccc;
       vertical-align: bottom;
+      font-weight: 600;
     }
 
     td {
-      padding: 10px;
+      padding: 0.6rem;
     }
 
-    tr:last-child {
-      border-bottom: 1px solid #ccc;
-    }
-
-    tr:nth-child(odd)>td {
+    tr:nth-child(odd) > td {
       background-color: lighten($main-bg,4.2%);
     }
 
-    tr:nth-child(even)>td {
+    tr:nth-child(even) > td {
       background-color: lighten($main-bg,2.4%);
     }
   }
@@ -543,67 +516,70 @@ ul {
   }
 
   p, li, dt, dd {
-    line-height: 1.5;
+    line-height: 1.6;
     margin-top: 0;
   }
 
   img {
+    border: 1px solid rgba(0,0,0,0.075);
+    border-bottom: 0;
+    box-shadow: 0 3px 4px -3px rgba(0,0,0,0.4);
     max-width: 100%;
+    margin: 0.4rem 0.8rem 0.4rem 1.6rem;
   }
 
   code {
-    background-color: rgba(0,0,0,0.05);
-    padding: 3px;
+    background-color: rgba(0,0,0,0.1);
+    padding: 3px 4px;
     border-radius: 3px;
     @extend %break-words;
     @extend %code-font;
   }
 
-  pre>code {
+  pre > code {
     background-color: transparent;
     padding: 0;
   }
 
   aside {
-    padding: 1em 1em 1em 4em;
-    text-shadow: 0 1px 0 lighten($aside-notice-bg, 15%);
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
+    padding: 1rem 1.6rem 1rem 4rem;
+    margin-top: 1.6rem;
+    margin-bottom: 1.6rem;
+    line-height: 1.6;
     background: $aside-notice-bg;
-    line-height: 1.5;
 
     &.warning {
       background-color: $aside-warning-bg;
-      text-shadow: 0 1px 0 lighten($aside-warning-bg, 15%);
     }
 
     &.success {
       background-color: $aside-success-bg;
-      text-shadow: 0 1px 0 lighten($aside-success-bg, 15%);
     }
   }
 
   aside:before {
+    position: relative;
+    top: 0.2rem;
     vertical-align: top;
     font-size: $aside-icon-font-size;
-    width: 2em;
-    margin-left: -1.75em;
-    padding-right: 0.5em;
+    width: 2rem;
+    margin-left: -2.6rem;
+    padding-right: 0.6rem;
   }
 
   aside.notice:before {
     @extend %icon-info-sign;
-    color: darken($aside-notice-bg, 30%);
+    color: darken($aside-notice-bg, 25%);
   }
 
   aside.warning:before {
     @extend %icon-exclamation-sign;
-    color: darken($aside-warning-bg, 30%);
+    color: darken($aside-warning-bg, 25%);
   }
 
   aside.success:before {
     @extend %icon-ok-sign;
-    color: darken($aside-success-bg, 30%);
+    color: darken($aside-success-bg, 25%);
   }
 
   .search-highlight {
@@ -637,11 +613,10 @@ ul {
     clear:right;
 
     box-sizing: border-box;
-    text-shadow: 0px 1px 2px rgba(0,0,0,0.4);
 
     @extend %right-col;
 
-    &>p { margin: 0; }
+    & > p { margin: 0; }
 
     a {
       color: #fff;
@@ -661,14 +636,8 @@ ul {
   }
 
   blockquote {
-    &>p {
-      //background-color: $code-annotation-bg;
-      //border-radius: 5px;
-      //padding: $code-annotation-padding;
+    & > p {
       color: #ccc;
-      text-shadow: 0 1px 2px rgba(0,0,0,0.4);
-      //border-top: 1px solid #000;
-      //border-bottom: 1px solid #404040;
     }
   }
 }
@@ -710,14 +679,16 @@ ul {
       position: static;
       left: 0;
       margin: 0 28px;
+      background: #555;
+      border-top: none;
+      border-bottom: none;
     }
   }
 
   .content {
     blockquote {
-      &>p {
+      & > p {
         color: $main-text;
-        text-shadow: none;
       }
     }
   }
@@ -746,7 +717,7 @@ ul {
     display: block;
   }
 
-  .tocify-wrapper .tocify-item > a {
+  .tocify-wrapper .tocify-item  >  a {
     padding-top: 0.3em;
     padding-bottom: 0.3em;
   }
@@ -756,6 +727,9 @@ ul {
       position: static;
       left: 0;
       margin: 0 28px;
+      background: #555;
+      border-top: none;
+      border-bottom: none;
     }
   }
 }
@@ -791,14 +765,16 @@ ul {
       position: static;
       left: 0;
       margin: 0 28px;
+      background: #555;
+      border-top: none;
+      border-bottom: none;
     }
   }
 
   .content {
     blockquote {
-      &>p {
+      & > p {
         color: $main-text;
-        text-shadow: none;
       }
     }
   }
