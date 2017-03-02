@@ -120,61 +120,139 @@
       <div class="dark-box"></div>
       <div class="content">
         
-          <h1 id="overview">Overview</h1>
+          <h1 id="welcome-to-flex-io">Welcome to Flex.io</h1>
 
-<h2 id="getting-started-2">Getting Started 2</h2>
+          <h1 id="quick-tour">Quick tour</h1>
 
-<h3 id="test-heading-3">Test Heading 3</h3>
-<pre class="highlight shell"><code>curl -X GET <span class="s1">'https://www.flex.io/api/v1/status'</span>
--H <span class="s2">"Authorization: Bearer [[app:Authorization]]"</span>
--H <span class="s2">"Content-Type: application/json; charset=utf-8"</span>
-</code></pre><pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"user_loggedin"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"user_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"john"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"user_eid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ktzsnpqgvwjm"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>The Flex.io API allows users to run pipe, configure and manage the running pipe process, and read the resulting pipe process output.  Users can set inputs and read outputs so that files can be easily processed with the pipe logic at runtime.</p>
+<h2 id="getting-started-with-flex-io">Getting Started with Flex.io</h2>
 
-<p>To begin using the API, do the following:</p>
+<p>This is a simple tutorial on how to build a pipe with Flex.io. In this example we will build a pipe that will grab all of the files in a Github folder and output the to a Dropbox folder.</p>
 
-<ol>
-<li>Create an account</li>
-<li>Get your API key
+<p>Here&rsquo;s how to do it</p>
 
-<ul>
-<li>go to the account area</li>
-<li>click on the API tab</li>
-<li>click on &ldquo;Create API Key&rdquo;</li>
-</ul></li>
-<li>Create your first API request:
+<p>First, make a new pipe by clicking the <strong>New Pipe</strong> button</p>
 
-<ul>
-<li>create an HTTP GET Request for &ldquo;/api/v1/status&rdquo;</li>
-<li>set the Authorization header to your API key: &ldquo;Authorization: Bearer [[app:Authorization]]&rdquo;</li>
-<li>set the content type to JSON: &ldquo;Content-Type: application/json; charset=utf-8&rdquo;</li>
-</ul></li>
-</ol>
+<p><insert image of new pipe modal></p>
+
+<p>This will open the <strong>New Pipe</strong> modal. If you&rsquo;d like, you can name the pipe here and add a description. When you&rsquo;re done click <strong>Web Link</strong> to select the type of input connection you&rsquo;d like to use.</p>
+
+<p><insert image of the next step: file chooser></p>
+
+<p>This is the file chooser step for the pipe. You can skip this step by clicking the <strong>Create Pipe</strong> button, but for our example, we&rsquo;ll specify a couple of files from a Github repository.</p>
+
+<p>We&rsquo;ll use some data from our friends at fivethirtyeight who provide all of the data on Github for the articles they write.</p>
+
+<p>(image)
+https://github.com/fivethirtyeight/data/tree/master/presidential-campaign-trail</p>
+
+<p>To get the URL for the raw files, we&rsquo;ll do the following:
+  * Click on each file we want
+  * Click the <strong>Raw</strong> button
+  * Copy the URL from the browser window into the file chooser in Flex.io.</p>
+
+<p>Once we&rsquo;re done adding the URLs we want for our pipe input, click the <strong>Create Pipe</strong> button.</p>
+
+<p>Our pipe has been created. Double-click on the pipe to open the pipe builder view.</p>
+
+<p><insert image of pipe builder></p>
+
+<p>We can see the input tile for this pipe which has the URLs we enter. Run the pipe by click the <strong>Run Pipe</strong> button.</p>
+
+<p>Once the pipe has been run, you&rsquo;ll see the two files listed in the input list and their corresponding data file in the content area</p>
+
+<p>Clicking on each file in the input list will show the preview of that file in the content area.</p>
+
+<p>At this point, our pipe doesn&rsquo;t do a whole lot, so let&rsquo;s add a step to change the data a bit.</p>
+
+<p>Click the <strong>+</strong> tile to the right of the input tile to add a step.</p>
+
+<p>Type <code class="prettyprint">convert</code> into the command bar below the pipe tiles and then click the <strong>save</strong> button in the command bar. This will convert the files into tables.</p>
 
 <aside class="notice">
-You can use either a <code>*</code> or a <code>-</code> to create bulleted lists.
+The <code>convert</code> command is a shorthand which converts a text-delimited file into a table using standard choices for CSV files. The verbose syntax for this command would be <code>convert from: delimited to: table delimiter: comma qualifier: double-quote header: true</code>.
 </aside>
 
-<aside class="warning">
-You can also tell the user that this is something bad to do&hellip;
+<p>Type <code class="prettyprint">transform case: upper</code> into the command bar and press <code>Ctrl+Enter</code></p>
+
+<aside class="notice">
+Pressing <code>Ctrl+Enter</code> is an easy way to save the step and update the pipe without having to click the <b>Save</b> button in the command bar.
 </aside>
 
-<aside class="success">
-&hellip;or that this is something good to do. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id erat bibendum, rutrum justo ac, venenatis metus. Morbi lobortis lacinia tellus, ut gravida mi elementum sed. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+<p><image of table with transform column highlighted></p>
+
+<p>We can see the result of this step in the table in the content area. The <code class="prettyprint">location</code> column has been converted to all capital letters.</p>
+
+<p>The final step is to output these files to a folder in Dropbox.</p>
+
+<p>Clikc the <strong>Add Output</strong> tile in the pipe list to open the output file chooser.</p>
+
+<p><image of output file chooser></p>
+
+<p>Since we&rsquo;re just getting started, we&rsquo;ll need to set up a connection to our Dropbox account. Click <strong>Dropbox</strong> to configure the connection. This will open the *<em>New Connection *</em> modal.</p>
+
+<p>Click on the <strong>Authenticate your Dropbox account</strong> button and enter your Dropbox username and password.</p>
+
+<aside class="notice">
+This information is out submitted to Dropbox! Flex.io does not store your password for Dropbox, Google Drive or any other connections which use OAuth.
 </aside>
 
-<h2 id="authentication">Authentication</h2>
+<p>Once you&rsquo;ve entered your username and password, the window should close and your should see a message that says &ldquo;You&rsquo;ve successfully connected to Dropbox!&rdquo;.</p>
 
-<p>All API calls use the following root: https://www.flex.io/api/v1/</p>
+<p>Click the <strong>Create Connection</strong> button. The <strong>New Connection</strong> modal will close and the <strong>Output File Chooser</strong> modal will open up.</p>
 
-<p>Most API calls must be authenticated. API calls are authenticated by passing the API key in the Authorization HTTP header:</p>
+<p><image of output folder chooser></p>
 
-<p>Authorization: Bearer [[app:Authorization]]</p>
+<p>Select the folded you&rsquo;d like to output the files to by either double-clicking on the folders in the file list or typing the folder name in the &ldquo;Output folder&rdquo; text box.</p>
+
+<p>Click the <strong>Done</strong> button.</p>
+
+<p>Click the <strong>Save</strong> button in the command bar.</p>
+
+<aside class="notice">
+Pipes will only output to when formally running the pipe. In order for our output get piped to Dropbox, we need to click the <b>Run Pipe</b> button.
+</aside>
+
+<p>Click the <strong>Run Pipe</strong> button.</p>
+
+<p>Open up Dropbox folder to see the files there.</p>
+
+          <h1 id="using-the-command-line">Using the Command Line</h1>
+
+<p>The Flex.io Command Line Interface (CLI) is a tool used to manage your Flex.io resources and services.   One just one compact tool, you can integrate Flex.io services into your scripts and command-line environment, enabling powerful integration with other systems and software.</p>
+
+<h2 id="download-and-install">Download and Install</h2>
+
+<p>If you use a Mac or want to install via npm (on Windows, Mac, or Linux), you can install using the following command</p>
+<pre class="highlight plaintext"><code>$ npm install -g flexio
+</code></pre>
+<p>If you use a Windows or Linux computer, the following binary installation packages are available for download:</p>
+
+<ul>
+<li><a href="http://downloads.flex.io/flexiocli.msi">Windows MSI (64-bit)</a></li>
+<li><a href="http://downloads.flex.io/flexiocli.zip">Windows standalone executable (64-bit)</a></li>
+<li><a href="http://downloads.flex.io/flexiocli-1.0-amd64.deb">Linux/Debian .deb</a></li>
+<li>Linux/Redhat .rpm (TBA)</li>
+</ul>
+
+<h2 id="source-code">Source Code</h2>
+
+<p>The source code is available on Github.  Download it or view it <a href="https://github.com/flexiodata">here</a>:</p>
+
+<h2 id="configure">Configure</h2>
+
+<p>After installation, to begin using the Flex.io Command Line Interface, you must first configure it with your API Key.   The API Key can be found on your account info page on Flex.io&rsquo;s website.</p>
+<pre class="highlight plaintext"><code>$ flexio configure\nConfiguring profile 'default'\nPlease enter your API key: YOUR-API-KEY",
+</code></pre>
+<h2 id="run-flex-io-cli-commands">Run Flex.io CLI commands</h2>
+
+<p>After configuring the Flex.io Command Line Interface, integrating with Flex.io pipes and services is a snap.</p>
+<pre class="highlight plaintext"><code>$ flexio pipes run r9q485j56n data.csv
+</code></pre>
+          <h1 id="pipe-examples">Pipe examples</h1>
+
+          <h1 id="command-line-examples">Command line examples</h1>
+
+          <h1 id="frequently-asked-questions">Frequently Asked Questions</h1>
 
       </div>
       <div class="dark-box">
