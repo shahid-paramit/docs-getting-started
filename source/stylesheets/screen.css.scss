@@ -675,6 +675,8 @@ ul {
   }
 
   .content {
+    max-width: 800px;
+
     pre, blockquote {
       position: static;
       left: 0;
