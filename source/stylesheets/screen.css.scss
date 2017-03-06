@@ -539,7 +539,7 @@ ul {
     }
 
     tr:nth-child(even) > td {
-      background-color: #f8f8f8;
+      background-color: $table-shaded-row-bg;
     }
   }
 
