@@ -124,21 +124,23 @@
         
           <h1 id="welcome-to-flex-io">Welcome to Flex.io</h1>
 
-          <h1 id="quick-tour">Quick tour</h1>
+<p>Flex.io allows you to hack your data busywork: mashup APIs, reformat JSON and transform data with cloud-based data pipes.</p>
 
-<h2 id="getting-started-with-flex-io">Getting Started with Flex.io</h2>
+          <h1 id="getting-started-with-flex-io">Getting Started with Flex.io</h1>
 
 <p>This is a simple tutorial on how to build a pipe with Flex.io. In this example we will build a pipe that will grab all of the files in a Github folder and output the to a Dropbox folder.</p>
 
-<p>Here&rsquo;s how to do it</p>
+<p>Here&rsquo;s how to do it:</p>
 
-<p>First, make a new pipe by clicking the <strong>New Pipe</strong> button</p>
+<h5 id="1-create-a-new-pipe-by-clicking-the-new-pipe-button">1. Create a new pipe by clicking the <strong>New Pipe</strong> button</h5>
 
-<p><insert image of new pipe modal></p>
+<p>(image)
+new pipe modal</p>
 
 <p>This will open the <strong>New Pipe</strong> modal. If you&rsquo;d like, you can name the pipe here and add a description. When you&rsquo;re done click <strong>Web Link</strong> to select the type of input connection you&rsquo;d like to use.</p>
 
-<p><insert image of the next step: file chooser></p>
+<p>(image)
+file chooser</p>
 
 <p>This is the file chooser step for the pipe. You can skip this step by clicking the <strong>Create Pipe</strong> button, but for our example, we&rsquo;ll specify a couple of files from a Github repository.</p>
 
@@ -147,16 +149,20 @@
 <p>(image)
 https://github.com/fivethirtyeight/data/tree/master/presidential-campaign-trail</p>
 
-<p>To get the URL for the raw files, we&rsquo;ll do the following:
-  * Click on each file we want
-  * Click the <strong>Raw</strong> button
-  * Copy the URL from the browser window into the file chooser in Flex.io.</p>
+<p>To get the URL for the raw files, we&rsquo;ll do the following:</p>
+
+<ul>
+<li>Click on each file we want</li>
+<li>Click the <strong>Raw</strong> button</li>
+<li>Copy the URL from the browser window into the file chooser in Flex.io.</li>
+</ul>
 
 <p>Once we&rsquo;re done adding the URLs we want for our pipe input, click the <strong>Create Pipe</strong> button.</p>
 
 <p>Our pipe has been created. Double-click on the pipe to open the pipe builder view.</p>
 
-<p><insert image of pipe builder></p>
+<p>(image)
+pipe builder</p>
 
 <p>We can see the input tile for this pipe which has the URLs we enter. Run the pipe by click the <strong>Run Pipe</strong> button.</p>
 
@@ -180,7 +186,8 @@ The <code>convert</code> command is a shorthand which converts a text-delimited 
 Pressing <code>Ctrl+Enter</code> is an easy way to save the step and update the pipe without having to click the <b>Save</b> button in the command bar.
 </aside>
 
-<p><image of table with transform column highlighted></p>
+<p>(image)
+table with transform column highlighted</p>
 
 <p>We can see the result of this step in the table in the content area. The <code class="prettyprint">location</code> column has been converted to all capital letters.</p>
 
@@ -188,7 +195,8 @@ Pressing <code>Ctrl+Enter</code> is an easy way to save the step and update the 
 
 <p>Clikc the <strong>Add Output</strong> tile in the pipe list to open the output file chooser.</p>
 
-<p><image of output file chooser></p>
+<p>(image)
+output file chooser</p>
 
 <p>Since we&rsquo;re just getting started, we&rsquo;ll need to set up a connection to our Dropbox account. Click <strong>Dropbox</strong> to configure the connection. This will open the *<em>New Connection *</em> modal.</p>
 
@@ -202,7 +210,8 @@ This information is out submitted to Dropbox! Flex.io does not store your passwo
 
 <p>Click the <strong>Create Connection</strong> button. The <strong>New Connection</strong> modal will close and the <strong>Output File Chooser</strong> modal will open up.</p>
 
-<p><image of output folder chooser></p>
+<p>(image)
+output folder chooser</p>
 
 <p>Select the folded you&rsquo;d like to output the files to by either double-clicking on the folders in the file list or typing the folder name in the &ldquo;Output folder&rdquo; text box.</p>
 
