@@ -1,18 +1,18 @@
-#Quick tour
-
-## Getting Started with Flex.io
+# Getting Started with Flex.io
 
 This is a simple tutorial on how to build a pipe with Flex.io. In this example we will build a pipe that will grab all of the files in a Github folder and output the to a Dropbox folder.
 
-Here's how to do it
+Here's how to do it:
 
-First, make a new pipe by clicking the **New Pipe** button
+##### 1. Create a new pipe by clicking the **New Pipe** button
 
-<insert image of new pipe modal>
+(image)
+new pipe modal
 
 This will open the **New Pipe** modal. If you'd like, you can name the pipe here and add a description. When you're done click **Web Link** to select the type of input connection you'd like to use.
 
-<insert image of the next step: file chooser>
+(image)
+file chooser
 
 This is the file chooser step for the pipe. You can skip this step by clicking the **Create Pipe** button, but for our example, we'll specify a couple of files from a Github repository.
 
@@ -22,15 +22,17 @@ We'll use some data from our friends at fivethirtyeight who provide all of the d
 https://github.com/fivethirtyeight/data/tree/master/presidential-campaign-trail
 
 To get the URL for the raw files, we'll do the following:
-  * Click on each file we want
-  * Click the **Raw** button
-  * Copy the URL from the browser window into the file chooser in Flex.io.
+
+* Click on each file we want
+* Click the **Raw** button
+* Copy the URL from the browser window into the file chooser in Flex.io.
 
 Once we're done adding the URLs we want for our pipe input, click the **Create Pipe** button.
 
 Our pipe has been created. Double-click on the pipe to open the pipe builder view.
 
-<insert image of pipe builder>
+(image)
+pipe builder
 
 We can see the input tile for this pipe which has the URLs we enter. Run the pipe by click the **Run Pipe** button.
 
@@ -54,7 +56,8 @@ Type `transform case: upper` into the command bar and press <code>Ctrl+Enter</co
 Pressing <code>Ctrl+Enter</code> is an easy way to save the step and update the pipe without having to click the <b>Save</b> button in the command bar.
 </aside>
 
-<image of table with transform column highlighted>
+(image)
+table with transform column highlighted
 
 We can see the result of this step in the table in the content area. The `location` column has been converted to all capital letters.
 
@@ -62,7 +65,8 @@ The final step is to output these files to a folder in Dropbox.
 
 Clikc the **Add Output** tile in the pipe list to open the output file chooser.
 
-<image of output file chooser>
+(image)
+output file chooser
 
 Since we're just getting started, we'll need to set up a connection to our Dropbox account. Click **Dropbox** to configure the connection. This will open the **New Connection ** modal.
 
@@ -76,7 +80,8 @@ Once you've entered your username and password, the window should close and your
 
 Click the **Create Connection** button. The **New Connection** modal will close and the **Output File Chooser** modal will open up.
 
-<image of output folder chooser>
+(image)
+output folder chooser
 
 Select the folded you'd like to output the files to by either double-clicking on the folders in the file list or typing the folder name in the "Output folder" text box.
 
