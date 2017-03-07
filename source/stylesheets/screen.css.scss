@@ -568,7 +568,7 @@ ul {
   }
 
   code {
-    background-color: rgba(0,0,0,0.075);
+    background-color: rgba(0,0,0,0.08);
     padding: 3px;
     border-radius: 3px;
     @extend %break-words;
@@ -581,18 +581,29 @@ ul {
   }
 
   aside {
-    padding: 1rem 1.6rem 1rem 4rem;
+    padding: 1.2rem 1.6rem 1.2rem 4rem;
     margin-top: 1.6rem;
     margin-bottom: 1.6rem;
+    margin-left: $main-padding;
+    margin-right: $main-padding !important;
     line-height: 1.6;
-    background: $aside-notice-bg;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-left-width: 4px;
+    border-radius: 5px;
+
+    &.notice {
+      border-left-color: $aside-notice-bg;
+      background-color: rgba($aside-notice-bg, 0.06);
+    }
 
     &.warning {
-      background-color: $aside-warning-bg;
+      border-left-color: $aside-warning-bg;
+      background-color: rgba($aside-warning-bg, 0.06);
     }
 
     &.success {
-      background-color: $aside-success-bg;
+      border-left-color: $aside-success-bg;
+      background-color: rgba($aside-success-bg, 0.06);
     }
   }
 
@@ -608,17 +619,17 @@ ul {
 
   aside.notice:before {
     @extend %icon-info-sign;
-    color: darken($aside-notice-bg, 25%);
+    color: $aside-notice-bg;
   }
 
   aside.warning:before {
     @extend %icon-exclamation-sign;
-    color: darken($aside-warning-bg, 25%);
+    color: $aside-warning-bg;
   }
 
   aside.success:before {
     @extend %icon-ok-sign;
-    color: darken($aside-success-bg, 25%);
+    color: $aside-success-bg;
   }
 
   .search-highlight {
