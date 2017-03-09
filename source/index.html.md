@@ -1,5 +1,5 @@
 ---
-title: Flex.io API Reference
+title: Flex.io Getting Started
 
 language_tabs:
 
