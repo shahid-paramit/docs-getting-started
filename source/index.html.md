@@ -1,5 +1,5 @@
 ---
-title: Flex.io Getting Started
+title: Getting Started with Flex.io
 
 language_tabs:
 
