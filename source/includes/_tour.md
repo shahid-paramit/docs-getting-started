@@ -1,4 +1,4 @@
-# Getting Started with Flex.io
+# The two-minute tour
 
 This is a simple tutorial on how to build a pipe with Flex.io. In this example we will build a pipe that will grab all of the files in a Github folder and output the to a Dropbox folder.
 
