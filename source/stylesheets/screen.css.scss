@@ -42,10 +42,11 @@ body {
 }
 
 a {
-  color: $fx-green;
-
+  color: $link-text;
+  text-decoration: none;
   &:hover {
-    color: darken($fx-green, 5%);
+    //color: darken($link-text, 10%);
+    text-decoration: underline;
   }
 }
 
@@ -231,10 +232,10 @@ ul {
   // This is the currently selected ToC entry
   .tocify-focus {
     box-shadow: 0px 1px 0px $nav-active-shadow;
-    background-color: $nav-active-bg;
+    background-color: $nav-active-text;
 
     & > a {
-      color: $nav-active-text;
+      color: #fff;
 
       &:hover {
         text-decoration: none;
@@ -264,7 +265,7 @@ ul {
         }
 
         padding-left: $nav-padding + ($nav-indent * 2);
-        font-size: $nav-subitem-font-size - 3;
+        font-size: $nav-subitem-font-size - 2;
       }
     }
   }
@@ -569,7 +570,8 @@ ul {
   }
 
   code {
-    background-color: rgba(0,0,0,0.08);
+    color: $code-text;
+    background-color: rgba(0,0,0,0.06);
     padding: 3px;
     border-radius: 3px;
     @extend %break-words;
@@ -577,6 +579,7 @@ ul {
   }
 
   pre > code {
+    color: #fff;
     background-color: transparent;
     padding: 0;
   }
