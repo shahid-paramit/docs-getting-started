@@ -9,4 +9,5 @@ includes:
   - quickstart-pipe
   - quickstart-cli
   - contact-us
+  - cli-installation
 ---
