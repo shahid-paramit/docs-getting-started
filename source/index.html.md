@@ -6,8 +6,7 @@ language_tabs:
 includes:
   - welcome
   - tour
-  - cli
-  - examples-pipe
-  - examples-cli
-  - faq
+  - quickstart-pipe
+  - quickstart-cli
+  - contact-us
 ---
