@@ -1,4 +1,4 @@
-# Using the Command Line
+# Using the command line
 
 The Flex.io Command Line Interface (CLI) is a tool used to manage your Flex.io resources and services.   One just one compact tool, you can integrate Flex.io services into your scripts and command-line environment, enabling powerful integration with other systems and software.
 
