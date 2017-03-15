@@ -5,8 +5,9 @@ language_tabs:
 
 includes:
   - welcome
-  - tour
-  - quickstart-pipe
-  - quickstart-cli
+  - run
+  - build
+  - cli
+  - api
   - contact-us
 ---
