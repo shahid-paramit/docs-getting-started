@@ -67,61 +67,67 @@ Now that you've installed and configured the command line, you're ready to list 
 
     &nbsp;
 
-2. Once you've listed the pipes, browse the list.  You'll see the identifiers (eids) for your pipes along with their aliases and descriptions.  For example, in your list of pipes, you should see the two sample pipes from your 'Sample Project' repository with the descriptions "Review commits across multiple..." and "Select a subset of a list of contacts" 
+2. Once you've listed the pipes, browse the list.  You'll see the identifiers (eids) for your pipes along with their aliases and descriptions.  For example, in your list of pipes, you should see the two sample pipes from your 'Sample Project' repository with the descriptions "Review commits across multiple..." and "Select a subset of a list of contacts".  You should also see the pipe we built in the "Building a pipe" section with "Getting Started" name, alias, and description.
 
     &nbsp;
 
-    **TODO; need to add aliases for these pipes**
-
-    &nbsp;
-
-3. In general, to run a pipe, you'll enter a command like 'flexio pipes run <pipe-name>' at the command prompt, where <pipe-name> is the alias for the pipe, which can be set when creating or editing a pipe.  To run the 'Contact Refinement' sample pipe, enter the following:
+3. In general, to run a pipe, enter a command like 'flexio pipes run &lt;pipe-alias&gt;' at the command prompt, where &lt;pipe-alias&gt; is the alias for the pipe, which can be set when creating or editing a pipe.
 
     &nbsp;
 
     ```
-    $ flexio pipes run <pipe alias>
+    $ flexio pipes run <pipe-alias>
     ```
 
     &nbsp;
 
-    **TODO: set alias on installation, or use alias from public pipe**
-
-    &nbsp;
-
-
-4. To send input files to a pipe, simply append one or more files, or a wildcard:
+4. Let's run the 'Getting Started' sample pipe, assuming the alias is 'paul-getting-started':
 
     &nbsp;
 
     ```
-    $ flexio pipes run pipe-name file.txt
+    $ flexio pipes run paul-getting-started
+    ```
+
+    &nbsp;
+
+5. If we want to get back the data from the output, we add the "--output data" parameter to the command:
+
+    &nbsp;
+
+    ```
+    $ flexio pipes run <pipe-alias> --output data
+    ```
+
+    &nbsp;
+
+6. Let's get back the output for the 'Getting Started' sample pipe, assuming the alias is 'paul-getting-started':
+
+    &nbsp;
+
+    ```
+    $ flexio pipes run paul-getting-started --output data
     -or-
-    $ flexio pipes run pipe-name file.txt *.csv
+    $ flexio pipes run paul-getting-started --output data > output.txt
     ```
 
     &nbsp;
 
 
-5. You can also send the stdin input to a pipe:
+7. With the command line, it's also possible to send input files or stdin to a pipe.
 
     &nbsp;
 
     ```
-    $ echo Hello, World | flexio pipes run pipe-name
+    $ flexio pipes run <pipe-alias> file.txt
+    -or-
+    $ flexio pipes run <pipe-alias> file.txt *.csv
+    -or-
+    $ echo Hello, World | flexio pipes run <pipe-alias>
     ```
 
     &nbsp;
 
-6. Many pipes output data. By default, the flexio command line interface does not echo any data. If you want to capture this information, add "--output data":
 
-    &nbsp;
-
-    ```
-    $ echo Hello, World | flexio pipes run pipe-name --output data > output.txt
-    ```
-
-    &nbsp;
-
-Further details on the CLI and  SDKs can be found in the [TODO](https://www.flex.io/docs/api/).
+Further details on the CLI and SDKs can be found in the [API Reference Documentation](https://www.flex.io/docs/api/).
 

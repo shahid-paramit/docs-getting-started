@@ -4,7 +4,7 @@ Thanks for stopping by! This getting started guide will get you building and run
 
 ---
 
-**Flex.io enables you to build and run cloud-based pipes.**  
+**Flex.io enables you to build and run cloud-based pipes.**
 
 Simply put, a pipe does the following:
 
@@ -17,7 +17,7 @@ Once you've built a pipe, you can run it manually from within the application, f
 
 In this getting started guide, we'll show you how to:
 
-* [Run an existing pipe](#running-a-pipe) TODO;
+* [Run an existing pipe](#running-a-pipe)
 * [Build and run a new pipe](#building-a-pipe)
 * [Run a pipe from the command line](#using-the-command-line)
 * [Run a pipe from an API](#using-the-api)

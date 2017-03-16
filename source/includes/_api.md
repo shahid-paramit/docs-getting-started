@@ -1,6 +1,6 @@
 # Using the API
 
-The Flex.io API allows users to run pipes, configure and manage the pipe process as well as read the pipe process output.  Users can set inputs and read outputs so that files can be easily processed with the pipe logic at runtime.
+The Flex.io API allows users to list and run pipes, configure and manage the pipe process as well as read the pipe process output.  Users can set inputs and read outputs so that files can be easily processed with the pipe logic at runtime.
 
 The Flex.io API is organized around REST: pipes, processes, and other resources are accessed with URL endpoints and manipulated using GET, POST, and DELETE HTTP verbs.  Results are returned as JSON.  Errors are returned using HTTP error codes.
 
@@ -19,10 +19,10 @@ To use the API, you'll need an API key:
 
 Once you have an API key, you can list your pipes by doing the following:
 
-1. create an HTTP GET request on "https://www.flex.io/api/v1/pipes"
-2. set the Authorization header to your API key: "Authorization: Bearer :token"
+1. Create an HTTP GET request on "https://www.flex.io/api/v1/pipes"
+2. Set the Authorization header to your API key: "Authorization: Bearer :token".
 
-For example, in CURL, this would look like
+For example, in CURL, this would look like:
 
 ```
 curl -X GET 'https://www.flex.io/api/v1/pipes'
@@ -31,11 +31,20 @@ curl -X GET 'https://www.flex.io/api/v1/pipes'
 
 You can also run your pipes by doing the following:
 
-1. create an HTTP POST request on "https://www.flex.io/api/v1/pipes/chicago-homicides-v1/run"
-2. set the Authorization header to your API key: "Authorization: Bearer :token"
+1. Create an HTTP POST request on "https://www.flex.io/api/v1/pipes/&lt;pipe-alias&gt;/run"
+2. Set the Authorization header to your API key: "Authorization: Bearer :token"
+
+For example, in CURL, this would look like:
 
 ```
-curl -X GET 'https://www.flex.io/api/v1/pipes/chicago-homicides-v1/run'
+curl -X POST 'https://www.flex.io/api/v1/pipes/<pipe-alias>/run'
+-H "Authorization: Bearer zxcvzxcvzxcvzxcv"
+```
+
+To run the "Getting Started" sample pipe, enter:
+
+```
+curl -X POST 'https://www.flex.io/api/v1/pipes/paul-getting-started/run'
 -H "Authorization: Bearer zxcvzxcvzxcvzxcv"
 ```
 
