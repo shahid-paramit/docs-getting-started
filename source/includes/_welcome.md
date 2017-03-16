@@ -19,15 +19,15 @@ In this getting started guide, we'll show you how to:
 
 * [Run an existing pipe](#running-a-pipe) TODO;
 * [Build and run a new pipe](#building-a-pipe)
-* [Run a pipe from the command line](#using-the-api)
-* [Run a pipe from an API]()
+* [Run a pipe from the command line](#using-the-command-line)
+* [Run a pipe from an API](#using-the-api)
 
 When you're ready to start building pipes, here are some handy reference guides:
 
 * [Web app docs](https://www.flex.io/docs/web-app/).  Reference for the web app, including syntax for [command operations](https://www.flex.io/docs/web-app/#command-bar-operations) and [functions](https://www.flex.io/docs/web-app/#functions-and-syntax).
 * [API reference](https://www.flex.io/docs/api/). Reference for the API, including authentication, parameters and errors.
-* [Command line interface (CLI)]() TODO;
-* [Documentation portal](https://www.flex.io/docs/). The central portal for all Flex.io docs and support.
+* [Command line interface (CLI)](https://www.flex.io/docs/api/#command-line-interface).  Guide to installing and using the Command Line Interface.
+* [Documentation portal](https://www.flex.io/docs/). The central docs portal for all Flex.io documentation and support.
 
 
 Along the way, we're here to help, so please [contact us](#getting-further-help) if you have questions, feedback or ideas.
