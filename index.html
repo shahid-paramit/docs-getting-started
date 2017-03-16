@@ -130,7 +130,7 @@
 
 <hr>
 
-<p><strong>Flex.io enables you to build and run cloud-based pipes.</strong>  </p>
+<p><strong>Flex.io enables you to build and run cloud-based pipes.</strong></p>
 
 <p>Simply put, a pipe does the following:</p>
 
@@ -145,7 +145,7 @@
 <p>In this getting started guide, we&rsquo;ll show you how to:</p>
 
 <ul>
-<li><a href="#running-a-pipe">Run an existing pipe</a> TODO;</li>
+<li><a href="#running-a-pipe">Run an existing pipe</a></li>
 <li><a href="#building-a-pipe">Build and run a new pipe</a></li>
 <li><a href="#using-the-command-line">Run a pipe from the command line</a></li>
 <li><a href="#using-the-api">Run a pipe from an API</a></li>
@@ -168,35 +168,24 @@
 
 <p>Within the <a href="https://www.flex.io/docs/web-app/">Web App</a>, you can run a pipe by simply clicking on the Run Pipe button at the top-right of the <a href="https://www.flex.io/docs/web-app/#building-and-running-a-pipe" title="Pipe Builder">pipe builder</a>.</p>
 
-<p><img src="https://s3.amazonaws.com/docs-assets/gs-run-button.png" title="Run Pipe Button" alt="Run Pipe Button" /></p>
+<p><img src="https://s3.amazonaws.com/docs-assets/gs-run-button.png" title="Run Pipe Button" alt="Run Pipe Button" /> TODO: change image</p>
 
-<p>If the pipe is public, you can open the pipe and run it directly; if a pipe is private, you have to sign in to your account to run it.</p>
-
-<h5 id="run-a-public-pipe">Run a public pipe:</h5>
-
-<ol>
-<li>Open the <a href="#">Contact Refinement sample pipe</a>.  TODO;</li>
-<li>Click the Run Pipe button at the top-right.</li>
-</ol>
-
-<p>When the pipe is running, you&rsquo;ll see a series of status bars showing the progress.  Then, when the pipe is finished, you&rsquo;ll see the result below the pipe steps.  You can click on any step to see command and corresponding output for that given step.</p>
-
-<h5 id="run-a-private-pipe">Run a private pipe:</h5>
+<p>Let&rsquo;s try it.</p>
 
 <ol>
 <li>Sign into Flex.io:  <a href="https://www.flex.io/app/signin">https://www.flex.io/app/signin</a></li>
 <li>Upon sign-in, you&rsquo;ll see the <a href="https://www.flex.io/docs/web-app/#project-list">Project List</a>; click on &lsquo;Sample Project&rsquo; to open the pipes for that project.</li>
-<li>You&rsquo;ll now see two sample pipes, &#39;Contact Refinement&rsquo; and &#39;GitHub Commits&rsquo;. Click on &#39;Contact Refinement&rsquo; to open the pipe builder.</li>
+<li>You&rsquo;ll now see two sample pipes, &#39;Contact Refinement&rsquo; and &#39;GitHub Commits&rsquo;. Click on &#39;GitHub Commits&rsquo; to open the pipe builder.</li>
 <li>Click the Run Pipe button at the top-right.</li>
 </ol>
 
-<p>When the pipe is running, you&rsquo;ll see a series of status bars showing the progress.  Then, when the pipe is finished, you&rsquo;ll see the result below the pipe steps.  You can click on any step to see command and corresponding output for that given step.  Further, you may modify the pipe by editing, removing or adding pipes steps.</p>
+<p>When the pipe is running, you&rsquo;ll see a series of status bars showing the progress.  Then, when the pipe is finished, you&rsquo;ll see the result below the pipe steps.  You can click on any step to see the command and corresponding output for that given step.  Further, you may modify the pipe by editing, removing or adding pipes steps.</p>
 
           <h1 id="building-a-pipe">Building a pipe</h1>
 
 <p>You can build a pipe in the Web App using the Pipe Builder.  A longer walkthrough can be found in the <a href="https://www.flex.io/docs/web-app/#building-and-running-a-pipe">Web App Documentation</a>.</p>
 
-<p>For this tutorial, we&rsquo;ll start with a blank pipe and then add an input and two operations.</p>
+<p>For this tutorial, we&rsquo;ll start with a blank pipe and then add an input and a few other steps.</p>
 
 <h5 id="create-a-new-pipe">Create a New Pipe</h5>
 
@@ -221,7 +210,7 @@
 
 <ul>
 <li>Name: Getting Started</li>
-<li>Alias: username-getting-started</li>
+<li>Alias: &lt;username&gt;-getting-started (note: &lt;username&gt; is the username you created when you signed up; so if your username is &ldquo;paul&rdquo;, you would have &ldquo;paul-getting-started&rdquo;)</li>
 <li>Description: This is a getting started pipe</li>
 </ul>
 
@@ -244,47 +233,68 @@
 
 <h5 id="build-a-pipe">Build a Pipe</h5>
 
-<p>Now, let&rsquo;s build some pipe steps.  We&rsquo;ll do an <code class="prettyprint">input</code>, a <code class="prettyprint">convert</code> and a <code class="prettyprint">select</code> operation to demonstrate.</p>
+<p>Now, let&rsquo;s add some pipe steps.  We&rsquo;ll add <code class="prettyprint">input</code>, <code class="prettyprint">convert</code>, <code class="prettyprint">merge</code>, <code class="prettyprint">select</code>, <code class="prettyprint">rename</code>, and <code class="prettyprint">sort</code> steps to demonstrate.</p>
 
 <ol>
-<li><p>Click the tile step &#39;Input&rsquo;.  A dialog will appear to help you add an input.  You could use the dialog to get started, but, for now, click Cancel.  Then, in the command bar, paste in the following <code class="prettyprint">input</code> command: </p>
+<li><p>Click the &#39;Add Input&rsquo; tile.  A dialog will appear to help you add an input.  You could use the dialog to get started, but, for now, click Cancel.  Then, in the command bar, paste in the following <code class="prettyprint">input</code> command:</p>
 
 <p>&nbsp;</p>
-<pre class="highlight plaintext"><code>input file: https://raw.githubusercontent.com/flexiodata/sample-data/master/contacts-2016-11.csv =&gt; test.csv
+<pre class="highlight plaintext"><code>input file: https://api.github.com/repos/flexiodata/docs-web-app/commits =&gt; docs-web-app-commits, https://api.github.com/repos/flexiodata/docs-getting-started/commits =&gt; docs-getting-started-commits, https://api.github.com/repos/flexiodata/docs-api/commits =&gt; docs-api-commits
 </code></pre>
 <p>&nbsp;</p>
 
 <p>&nbsp;</p>
 
-<p><img src="https://s3.amazonaws.com/docs-assets/gs-build-input.png" title="Input Command" alt="Input Command" /></p>
+<p><img src="https://s3.amazonaws.com/docs-assets/gs-build-input.png" title="Input Command" alt="Input Command" /> TODO: change image</p>
 
 <p>&nbsp;</p></li>
-<li><p>Click the Save button.  This will run the pipe through the Input step and provide you a preview of the text file.</p>
+<li><p>Click the Save button.  This will run the input command and provide you a preview of the api json.</p>
 
 <p>&nbsp;</p>
 
-<p><img src="https://s3.amazonaws.com/docs-assets/gs-build-input-save.png" title="Input Command" alt="Input Command" /></p>
+<p><img src="https://s3.amazonaws.com/docs-assets/gs-build-input-save.png" title="Input Command" alt="Input Command" /> TODO: change image</p>
 
 <p>&nbsp;</p></li>
-<li><p>Click on the + button to add an operation.  Paste the following <code class="prettyprint">convert</code> step into the Command Bar to convert the unstructured text into a table:</p>
+<li><p>Click on the + button to add another step.  Paste the following <code class="prettyprint">convert</code> command into the Command Bar to convert the unstructured text into a table:</p>
 
 <p>&nbsp;</p>
-<pre class="highlight plaintext"><code>convert from: delimited to: table delimiter: comma header: true
+<pre class="highlight plaintext"><code>convert to: table
 </code></pre>
 <p>&nbsp;</p></li>
-<li><p>Click the Save button to run the pipe through the conversion.  You will see a table in the preview.</p></li>
-<li><p>Click on the + button to add an operation.  Paste the following <code class="prettyprint">select</code> step into the Command Bar to reduce the number of fields down to a limited set:</p>
+<li><p>Click the Save button to run the conversion command.  You will see a table in the preview.</p></li>
+<li><p>Click on the + button to add another step.  Paste the following <code class="prettyprint">merge</code> command into the Command Bar to combine the separate tables from the previous step into one table:</p>
 
 <p>&nbsp;</p>
-<pre class="highlight plaintext"><code>select col: givenname, surname, streetaddress, city, state, zipcode
+<pre class="highlight plaintext"><code>merge
 </code></pre>
 <p>&nbsp;</p></li>
-<li><p>Click the Save button to run the pipe through the field selection.  The table in the preview will now populate with only the selected fields.</p></li>
+<li><p>Click the Save button to run the merge command.  You will see a combined table in the preview.</p></li>
+<li><p>Click on the + button to add another step.  Paste the following <code class="prettyprint">select</code> command into the Command Bar to reduce the number of fields down to a limited set:</p>
+
+<p>&nbsp;</p>
+<pre class="highlight plaintext"><code>select col: commit.author.date, commit.author.name, commit.author.email, commit.committer.name, commit.committer.email, commit.message
+</code></pre>
+<p>&nbsp;</p></li>
+<li><p>Click the Save button to run the select command.  The table in the preview will now populate with only the selected fields.</p></li>
+<li><p>Click on the + button to add another step.  Paste the following <code class="prettyprint">rename</code> command into the Command Bar to rename the columns:</p>
+
+<p>&nbsp;</p>
+<pre class="highlight plaintext"><code>rename col: commit.author.date=&gt;author_date, commit.author.name=&gt;author_name, commit.author.email=&gt;author_email, commit.committer.name=&gt;committer_name, commit.committer.email=&gt;committer_email, commit.message=&gt;commit_message
+</code></pre>
+<p>&nbsp;</p></li>
+<li><p>Click the Save button to run the rename command.  The table in the preview will now populate with the renamed fields.</p></li>
+<li><p>Click on the + button to add another step.  Paste the following <code class="prettyprint">sort</code> command into the Command Bar to sort the table:</p>
+
+<p>&nbsp;</p>
+<pre class="highlight plaintext"><code>sort col: author_date desc
+</code></pre>
+<p>&nbsp;</p></li>
+<li><p>Click the Save button to run the sort command.  The table in the preview will now populate with the sorted results.</p></li>
 </ol>
 
 <p>At this point, you can keep adding steps to build up the pipe logic; you can also edit a step by changing the command and pressing the Save button.  To remove a step, click on the &#39;X&rsquo; in the upper right of any tile.  If you add steps between other steps and click Save, the pipe will only run to that point.  Click the Run Pipe button to refresh your pipe.</p>
 
-<p>Please see the <a href="https://www.flex.io/docs/web-app/#pipes">full pipe documentation</a> for further details, along with all <a href="https://www.flex.io/docs/web-app/#command-bar-operations">command</a> and <a href="https://www.flex.io/docs/web-app/#functions-and-syntax">function</a> syntax.  </p>
+<p>Please see the <a href="https://www.flex.io/docs/web-app/#pipes">full pipe documentation</a> for further details, along with all <a href="https://www.flex.io/docs/web-app/#command-bar-operations">command</a> and <a href="https://www.flex.io/docs/web-app/#functions-and-syntax">function</a> syntax.</p>
 
           <h1 id="using-the-command-line">Using the command line</h1>
 
@@ -345,50 +355,52 @@ Please enter your API key: &lt;paste your api key here&gt;
 <pre class="highlight plaintext"><code>$ flexio pipes list
 </code></pre>
 <p>&nbsp;</p></li>
-<li><p>Once you&rsquo;ve listed the pipes, browse the list.  You&rsquo;ll see the identifiers (eids) for your pipes along with their aliases and descriptions.  For example, in your list of pipes, you should see the two sample pipes from your &#39;Sample Project&rsquo; repository with the descriptions &ldquo;Review commits across multiple&hellip;&rdquo; and &ldquo;Select a subset of a list of contacts&rdquo; </p>
-
-<p>&nbsp;</p>
-
-<p><strong>TODO; need to add aliases for these pipes</strong></p>
+<li><p>Once you&rsquo;ve listed the pipes, browse the list.  You&rsquo;ll see the identifiers (eids) for your pipes along with their aliases and descriptions.  For example, in your list of pipes, you should see the two sample pipes from your &#39;Sample Project&rsquo; repository with the descriptions &ldquo;Review commits across multiple&hellip;&rdquo; and &ldquo;Select a subset of a list of contacts&rdquo;.  You should also see the pipe we built in the &ldquo;Building a pipe&rdquo; section with &ldquo;Getting Started&rdquo; name, alias, and description.</p>
 
 <p>&nbsp;</p></li>
-<li><p>In general, to run a pipe, you&rsquo;ll enter a command like &#39;flexio pipes run <pipe-name>&rsquo; at the command prompt, where <pipe-name> is the alias for the pipe, which can be set when creating or editing a pipe.  To run the &#39;Contact Refinement&rsquo; sample pipe, enter the following:</p>
+<li><p>In general, to run a pipe, enter a command like &#39;flexio pipes run &lt;pipe-alias&gt;&rsquo; at the command prompt, where &lt;pipe-alias&gt; is the alias for the pipe, which can be set when creating or editing a pipe.</p>
 
 <p>&nbsp;</p>
-<pre class="highlight plaintext"><code>$ flexio pipes run &lt;pipe alias&gt;
+<pre class="highlight plaintext"><code>$ flexio pipes run &lt;pipe-alias&gt;
 </code></pre>
-<p>&nbsp;</p>
-
-<p><strong>TODO: set alias on installation, or use alias from public pipe</strong></p>
-
 <p>&nbsp;</p></li>
-<li><p>To send input files to a pipe, simply append one or more files, or a wildcard:</p>
+<li><p>Let&rsquo;s run the &#39;Getting Started&rsquo; sample pipe, assuming the alias is &#39;paul-getting-started&rsquo;:</p>
 
 <p>&nbsp;</p>
-<pre class="highlight plaintext"><code>$ flexio pipes run pipe-name file.txt
+<pre class="highlight plaintext"><code>$ flexio pipes run paul-getting-started
+</code></pre>
+<p>&nbsp;</p></li>
+<li><p>If we want to get back the data from the output, we add the &ldquo;&ndash;output data&rdquo; parameter to the command:</p>
+
+<p>&nbsp;</p>
+<pre class="highlight plaintext"><code>$ flexio pipes run &lt;pipe-alias&gt; --output data
+</code></pre>
+<p>&nbsp;</p></li>
+<li><p>Let&rsquo;s get back the output for the &#39;Getting Started&rsquo; sample pipe, assuming the alias is &#39;paul-getting-started&rsquo;:</p>
+
+<p>&nbsp;</p>
+<pre class="highlight plaintext"><code>$ flexio pipes run paul-getting-started --output data
 -or-
-$ flexio pipes run pipe-name file.txt *.csv
+$ flexio pipes run paul-getting-started --output data &gt; output.txt
 </code></pre>
 <p>&nbsp;</p></li>
-<li><p>You can also send the stdin input to a pipe:</p>
+<li><p>With the command line, it&rsquo;s also possible to send input files or stdin to a pipe.</p>
 
 <p>&nbsp;</p>
-<pre class="highlight plaintext"><code>$ echo Hello, World | flexio pipes run pipe-name
-</code></pre>
-<p>&nbsp;</p></li>
-<li><p>Many pipes output data. By default, the flexio command line interface does not echo any data. If you want to capture this information, add &ldquo;&ndash;output data&rdquo;:</p>
-
-<p>&nbsp;</p>
-<pre class="highlight plaintext"><code>$ echo Hello, World | flexio pipes run pipe-name --output data &gt; output.txt
+<pre class="highlight plaintext"><code>$ flexio pipes run &lt;pipe-alias&gt; file.txt
+-or-
+$ flexio pipes run &lt;pipe-alias&gt; file.txt *.csv
+-or-
+$ echo Hello, World | flexio pipes run &lt;pipe-alias&gt;
 </code></pre>
 <p>&nbsp;</p></li>
 </ol>
 
-<p>Further details on the CLI and  SDKs can be found in the <a href="https://www.flex.io/docs/api/">TODO</a>.</p>
+<p>Further details on the CLI and SDKs can be found in the <a href="https://www.flex.io/docs/api/">API Reference Documentation</a>.</p>
 
           <h1 id="using-the-api">Using the API</h1>
 
-<p>The Flex.io API allows users to run pipes, configure and manage the pipe process as well as read the pipe process output.  Users can set inputs and read outputs so that files can be easily processed with the pipe logic at runtime.</p>
+<p>The Flex.io API allows users to list and run pipes, configure and manage the pipe process as well as read the pipe process output.  Users can set inputs and read outputs so that files can be easily processed with the pipe logic at runtime.</p>
 
 <p>The Flex.io API is organized around REST: pipes, processes, and other resources are accessed with URL endpoints and manipulated using GET, POST, and DELETE HTTP verbs.  Results are returned as JSON.  Errors are returned using HTTP error codes.</p>
 
@@ -410,21 +422,27 @@ $ flexio pipes run pipe-name file.txt *.csv
 <p>Once you have an API key, you can list your pipes by doing the following:</p>
 
 <ol>
-<li>create an HTTP GET request on &ldquo;https://www.flex.io/api/v1/pipes&rdquo;</li>
-<li>set the Authorization header to your API key: &ldquo;Authorization: Bearer :token&rdquo;</li>
+<li>Create an HTTP GET request on &ldquo;https://www.flex.io/api/v1/pipes&rdquo;</li>
+<li>Set the Authorization header to your API key: &ldquo;Authorization: Bearer :token&rdquo;.</li>
 </ol>
 
-<p>For example, in CURL, this would look like</p>
+<p>For example, in CURL, this would look like:</p>
 <pre class="highlight plaintext"><code>curl -X GET 'https://www.flex.io/api/v1/pipes'
 -H "Authorization: Bearer zxcvzxcvzxcvzxcv"
 </code></pre>
 <p>You can also run your pipes by doing the following:</p>
 
 <ol>
-<li>create an HTTP POST request on &ldquo;https://www.flex.io/api/v1/pipes/chicago-homicides-v1/run&rdquo;</li>
-<li>set the Authorization header to your API key: &ldquo;Authorization: Bearer :token&rdquo;</li>
+<li>Create an HTTP POST request on &ldquo;https://www.flex.io/api/v1/pipes/&lt;pipe-alias&gt;/run&rdquo;</li>
+<li>Set the Authorization header to your API key: &ldquo;Authorization: Bearer :token&rdquo;</li>
 </ol>
-<pre class="highlight plaintext"><code>curl -X GET 'https://www.flex.io/api/v1/pipes/chicago-homicides-v1/run'
+
+<p>For example, in CURL, this would look like:</p>
+<pre class="highlight plaintext"><code>curl -X POST 'https://www.flex.io/api/v1/pipes/&lt;pipe-alias&gt;/run'
+-H "Authorization: Bearer zxcvzxcvzxcvzxcv"
+</code></pre>
+<p>To run the &ldquo;Getting Started&rdquo; sample pipe, enter:</p>
+<pre class="highlight plaintext"><code>curl -X POST 'https://www.flex.io/api/v1/pipes/paul-getting-started/run'
 -H "Authorization: Bearer zxcvzxcvzxcvzxcv"
 </code></pre>
 <p>Further details on the API can be found in the <a href="https://www.flex.io/docs/api/">API Reference Documentation</a>.</p>
