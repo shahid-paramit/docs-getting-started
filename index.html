@@ -164,7 +164,7 @@
 
 <p>Let&rsquo;s jump in!</p>
 
-          <h1 id="running-a-pipe">Running a Pipe</h1>
+          <h1 id="running-a-pipe">Running a pipe</h1>
 
 <p>Within the <a href="https://www.flex.io/docs/web-app/">Web App</a>, you can run a pipe by simply clicking on the Run Pipe button at the top-right of the <a href="https://www.flex.io/docs/web-app/#building-and-running-a-pipe" title="Pipe Builder">pipe builder</a>.</p>
 
@@ -192,7 +192,7 @@
 
 <p>When the pipe is running, you&rsquo;ll see a series of status bars showing the progress.  Then, when the pipe is finished, you&rsquo;ll see the result below the pipe steps.  You can click on any step to see command and corresponding output for that given step.  Further, you may modify the pipe by editing, removing or adding pipes steps.</p>
 
-          <h1 id="building-a-pipe">Building a Pipe</h1>
+          <h1 id="building-a-pipe">Building a pipe</h1>
 
 <p>You can build a pipe in the Web App using the Pipe Builder.  A longer walkthrough can be found in the <a href="https://www.flex.io/docs/web-app/#building-and-running-a-pipe">Web App Documentation</a>.</p>
 
@@ -205,25 +205,41 @@
 <ol>
 <li><p>Sign in to Flex.io and navigate to the Sample Project, as discussed above.</p>
 
-<p><img src="https://s3.amazonaws.com/docs-assets/gs-build-new.png" title="New Pipe Button" alt="New Pipe Button" /></p></li>
+<p>&nbsp;</p>
+
+<p><img src="https://s3.amazonaws.com/docs-assets/gs-build-new.png" title="New Pipe Button" alt="New Pipe Button" /></p>
+
+<p>&nbsp;</p></li>
 <li><p>Click on the New Pipe Button at the top right of the page and a New Pipe dialog will appear.</p>
 
-<p><img src="https://s3.amazonaws.com/docs-assets/gs-build-new.png" title="New Pipe Dialog" alt="New Pipe Dialog" /></p></li>
-<li><p>Enter the following:   TODO; (note - use an alias here so that you can call it in CLI, etc.?)</p>
+<p>&nbsp;</p>
+
+<p><img src="https://s3.amazonaws.com/docs-assets/gs-build-new-dialog.png" title="New Pipe Dialog" alt="New Pipe Dialog" /></p>
+
+<p>&nbsp;</p></li>
+<li><p>Enter the following:</p>
 
 <ul>
-<li>Name: </li>
-<li>Alias:</li>
-<li>Description: </li>
+<li>Name: Getting Started</li>
+<li>Alias: username-getting-started</li>
+<li>Description: This is a getting started pipe</li>
 </ul>
 
 <p>&nbsp;</p></li>
 <li><p>Click on the &lsquo;Blank Pipe&rsquo; icon and then click the Create Pipe button.</p>
 
-<p><img src="https://s3.amazonaws.com/docs-assets/gs-build-new.png" title="New Pipe Entry" alt="New Pipe Entry" /></p></li>
+<p>&nbsp;</p>
+
+<p><img src="https://s3.amazonaws.com/docs-assets/gs-build-new-pipe.png" title="New Pipe Entry" alt="New Pipe Entry" /></p>
+
+<p>&nbsp;</p></li>
 <li><p>Double-click on the Pipe to open the Pipe Builder.</p>
 
-<p><img src="https://s3.amazonaws.com/docs-assets/gs-build-new.png" title="New Pipe Builder" alt="New Pipe Builder" /></p></li>
+<p>&nbsp;</p>
+
+<p><img src="https://s3.amazonaws.com/docs-assets/gs-build-pipe-builder.png" title="New Pipe Builder" alt="New Pipe Builder" /></p>
+
+<p>&nbsp;</p></li>
 </ol>
 
 <h5 id="build-a-pipe">Build a Pipe</h5>
@@ -238,8 +254,18 @@
 </code></pre>
 <p>&nbsp;</p>
 
-<p><img src="https://s3.amazonaws.com/docs-assets/gs-build-new.png" title="Input Command" alt="Input Command" /></p></li>
-<li><p>Click the Save button.  This will run the pipe through the Input step and provide you a preview of the text file.</p></li>
+<p>&nbsp;</p>
+
+<p><img src="https://s3.amazonaws.com/docs-assets/gs-build-input.png" title="Input Command" alt="Input Command" /></p>
+
+<p>&nbsp;</p></li>
+<li><p>Click the Save button.  This will run the pipe through the Input step and provide you a preview of the text file.</p>
+
+<p>&nbsp;</p>
+
+<p><img src="https://s3.amazonaws.com/docs-assets/gs-build-input-save.png" title="Input Command" alt="Input Command" /></p>
+
+<p>&nbsp;</p></li>
 <li><p>Click on the + button to add an operation.  Paste the following <code class="prettyprint">convert</code> step into the Command Bar to convert the unstructured text into a table:</p>
 
 <p>&nbsp;</p>
@@ -260,8 +286,148 @@
 
 <p>Please see the <a href="https://www.flex.io/docs/web-app/#pipes">full pipe documentation</a> for further details, along with all <a href="https://www.flex.io/docs/web-app/#command-bar-operations">command</a> and <a href="https://www.flex.io/docs/web-app/#functions-and-syntax">function</a> syntax.  </p>
 
-          
+          <h1 id="using-the-command-line">Using the command line</h1>
+
+<p>The Flex.io Command Line Interface (CLI) is a tool for managing and running your Flex.io services from the command line. With just one compact utility, you can integrate Flex.io services into your scripts and command-line environment, enabling direct integration with other systems and software.</p>
+
+<p>Once you&rsquo;ve installed and configured the CLI, you&rsquo;ll be able to see a list of your pipes and run them from the client.  You can even feed data from the command line into the pipe for processing, then get back the results.</p>
+
+<h5 id="install-the-cli">Install the CLI</h5>
+
+<p>Several different versions of the command line are available; <a href="https://github.com/flexiodata/flexio-cli-js">see here for a complete list of options</a>.  For demonstration purposes here, we&rsquo;ll use the js client, which you can easily install with npm:</p>
+
+<ol>
+<li>Make sure you&rsquo;ve downloaded and installed <a href="https://nodejs.org/en/">Node.js</a></li>
+<li><p>At the command prompt, enter the following command:</p>
+
+<p>&nbsp;</p>
+<pre class="highlight plaintext"><code>$ npm install -g flexio
+</code></pre></li>
+</ol>
+
+<h5 id="configure-the-cli">Configure the CLI</h5>
+
+<p>After installation, you&rsquo;ll next need to configure the CLI with an API key.  Create an API Key as follows:</p>
+
+<ol>
+<li>Sign into Flex.io</li>
+<li>Once you&rsquo;ve signed into Flex.io, click on your user profile in the upper-right and click on &lsquo;Account&rsquo; from the dropdown menu.</li>
+<li>In the Account area, select the &#39;API&rsquo; tab.</li>
+<li><p>In the API area, click on the Create API Key button to generate a new API key</p>
+
+<p>&nbsp;</p>
+
+<p><img src="https://s3.amazonaws.com/docs-assets/gs-api-key.png" title="API Key" alt="API Key" /></p></li>
+<li><p>Once you&rsquo;ve generated the API key, go back to the command line and enter the following:</p>
+
+<p>&nbsp;</p>
+<pre class="highlight plaintext"><code>$ flexio configure
+</code></pre>
+<p>&nbsp;</p></li>
+<li><p>Next you&rsquo;ll be prompted to enter your API key:</p>
+
+<p>&nbsp;</p>
+<pre class="highlight plaintext"><code>$ flexio configure
+Configuring profile 'default'
+Please enter your API key: &lt;paste your api key here&gt;
+</code></pre>
+<p>&nbsp;</p></li>
+</ol>
+
+<h5 id="listing-and-running-your-pipes">Listing and Running your Pipes</h5>
+
+<p>Now that you&rsquo;ve installed and configured the command line, you&rsquo;re ready to list and run your pipes:</p>
+
+<ol>
+<li><p>To list your pipes, enter the following at the command prompt:</p>
+
+<p>&nbsp;</p>
+<pre class="highlight plaintext"><code>$ flexio pipes list
+</code></pre>
+<p>&nbsp;</p></li>
+<li><p>Once you&rsquo;ve listed the pipes, browse the list.  You&rsquo;ll see the identifiers (eids) for your pipes along with their aliases and descriptions.  For example, in your list of pipes, you should see the two sample pipes from your &#39;Sample Project&rsquo; repository with the descriptions &ldquo;Review commits across multiple&hellip;&rdquo; and &ldquo;Select a subset of a list of contacts&rdquo; </p>
+
+<p>&nbsp;</p>
+
+<p><strong>TODO; need to add aliases for these pipes</strong></p>
+
+<p>&nbsp;</p></li>
+<li><p>In general, to run a pipe, you&rsquo;ll enter a command like &#39;flexio pipes run <pipe-name>&rsquo; at the command prompt, where <pipe-name> is the alias for the pipe, which can be set when creating or editing a pipe.  To run the &#39;Contact Refinement&rsquo; sample pipe, enter the following:</p>
+
+<p>&nbsp;</p>
+<pre class="highlight plaintext"><code>$ flexio pipes run &lt;pipe alias&gt;
+</code></pre>
+<p>&nbsp;</p>
+
+<p><strong>TODO: set alias on installation, or use alias from public pipe</strong></p>
+
+<p>&nbsp;</p></li>
+<li><p>To send input files to a pipe, simply append one or more files, or a wildcard:</p>
+
+<p>&nbsp;</p>
+<pre class="highlight plaintext"><code>$ flexio pipes run pipe-name file.txt
+-or-
+$ flexio pipes run pipe-name file.txt *.csv
+</code></pre>
+<p>&nbsp;</p></li>
+<li><p>You can also send the stdin input to a pipe:</p>
+
+<p>&nbsp;</p>
+<pre class="highlight plaintext"><code>$ echo Hello, World | flexio pipes run pipe-name
+</code></pre>
+<p>&nbsp;</p></li>
+<li><p>Many pipes output data. By default, the flexio command line interface does not echo any data. If you want to capture this information, add &ldquo;&ndash;output data&rdquo;:</p>
+
+<p>&nbsp;</p>
+<pre class="highlight plaintext"><code>$ echo Hello, World | flexio pipes run pipe-name --output data &gt; output.txt
+</code></pre>
+<p>&nbsp;</p></li>
+</ol>
+
+<p>Further details on the CLI and  SDKs can be found in the <a href="https://www.flex.io/docs/api/">TODO</a>.</p>
+
           <h1 id="using-the-api">Using the API</h1>
+
+<p>The Flex.io API allows users to run pipes, configure and manage the pipe process as well as read the pipe process output.  Users can set inputs and read outputs so that files can be easily processed with the pipe logic at runtime.</p>
+
+<p>The Flex.io API is organized around REST: pipes, processes, and other resources are accessed with URL endpoints and manipulated using GET, POST, and DELETE HTTP verbs.  Results are returned as JSON.  Errors are returned using HTTP error codes.</p>
+
+<h5 id="accessing-an-api-key">Accessing an API Key</h5>
+
+<p>To use the API, you&rsquo;ll need an API key:</p>
+
+<ol>
+<li>Sign into Flex.io</li>
+<li>Once you&rsquo;ve signed into Flex.io, click on your user profile in the upper-right and click on &lsquo;Account&rsquo; from the dropdown menu.</li>
+<li>In the Account area, select the &#39;API&rsquo; tab.</li>
+<li>In the API area, click on the Create API Key button to generate a new API key</li>
+</ol>
+
+<p><img src="https://s3.amazonaws.com/docs-assets/gs-api-key.png" title="API Key" alt="API Key" /></p>
+
+<h5 id="examples">Examples</h5>
+
+<p>Once you have an API key, you can list your pipes by doing the following:</p>
+
+<ol>
+<li>create an HTTP GET request on &ldquo;https://www.flex.io/api/v1/pipes&rdquo;</li>
+<li>set the Authorization header to your API key: &ldquo;Authorization: Bearer :token&rdquo;</li>
+</ol>
+
+<p>For example, in CURL, this would look like</p>
+<pre class="highlight plaintext"><code>curl -X GET 'https://www.flex.io/api/v1/pipes'
+-H "Authorization: Bearer zxcvzxcvzxcvzxcv"
+</code></pre>
+<p>You can also run your pipes by doing the following:</p>
+
+<ol>
+<li>create an HTTP POST request on &ldquo;https://www.flex.io/api/v1/pipes/chicago-homicides-v1/run&rdquo;</li>
+<li>set the Authorization header to your API key: &ldquo;Authorization: Bearer :token&rdquo;</li>
+</ol>
+<pre class="highlight plaintext"><code>curl -X GET 'https://www.flex.io/api/v1/pipes/chicago-homicides-v1/run'
+-H "Authorization: Bearer zxcvzxcvzxcvzxcv"
+</code></pre>
+<p>Further details on the API can be found in the <a href="https://www.flex.io/docs/api/">API Reference Documentation</a>.</p>
 
           <h1 id="getting-further-help">Getting further help</h1>
 
