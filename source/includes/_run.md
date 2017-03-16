@@ -1,4 +1,4 @@
-# Running a Pipe
+# Running a pipe
 
 Within the [Web App](https://www.flex.io/docs/web-app/), you can run a pipe by simply clicking on the Run Pipe button at the top-right of the [pipe builder](https://www.flex.io/docs/web-app/#building-and-running-a-pipe "Pipe Builder").
 
