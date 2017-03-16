@@ -1,4 +1,4 @@
-# Building a Pipe
+# Building a pipe
 
 You can build a pipe in the Web App using the Pipe Builder.  A longer walkthrough can be found in the [Web App Documentation](https://www.flex.io/docs/web-app/#building-and-running-a-pipe).
 
@@ -10,26 +10,42 @@ Let's start by creating a new pipe.
 
 1.    Sign in to Flex.io and navigate to the Sample Project, as discussed above.
 
+    &nbsp;
+
     ![New Pipe Button](https://s3.amazonaws.com/docs-assets/gs-build-new.png "New Pipe Button")
+
+    &nbsp;
 
 2.    Click on the New Pipe Button at the top right of the page and a New Pipe dialog will appear.
 
-    ![New Pipe Dialog](https://s3.amazonaws.com/docs-assets/gs-build-new.png "New Pipe Dialog")
+    &nbsp;
 
-3.    Enter the following:   TODO; (note - use an alias here so that you can call it in CLI, etc.?)
-    * Name: 
-    * Alias:
-    * Description: 
+    ![New Pipe Dialog](https://s3.amazonaws.com/docs-assets/gs-build-new-dialog.png "New Pipe Dialog")
+
+    &nbsp;
+
+3.    Enter the following:
+    * Name: Getting Started
+    * Alias: username-getting-started
+    * Description: This is a getting started pipe
 
     &nbsp;
 
 4.    Click on the 'Blank Pipe' icon and then click the Create Pipe button.
 
-    ![New Pipe Entry](https://s3.amazonaws.com/docs-assets/gs-build-new.png "New Pipe Entry")
+    &nbsp;
+
+    ![New Pipe Entry](https://s3.amazonaws.com/docs-assets/gs-build-new-pipe.png "New Pipe Entry")
+
+    &nbsp;
 
 5.    Double-click on the Pipe to open the Pipe Builder.
 
-    ![New Pipe Builder](https://s3.amazonaws.com/docs-assets/gs-build-new.png "New Pipe Builder")
+    &nbsp;
+
+    ![New Pipe Builder](https://s3.amazonaws.com/docs-assets/gs-build-pipe-builder.png "New Pipe Builder")
+
+    &nbsp;
 
 
 ##### Build a Pipe
@@ -47,10 +63,19 @@ Now, let's build some pipe steps.  We'll do an `input`, a `convert` and a `selec
     &nbsp;
 
 
-    ![Input Command](https://s3.amazonaws.com/docs-assets/gs-build-new.png "Input Command")
+    &nbsp;
+
+    ![Input Command](https://s3.amazonaws.com/docs-assets/gs-build-input.png "Input Command")
+
+    &nbsp;
 
 2.    Click the Save button.  This will run the pipe through the Input step and provide you a preview of the text file.
 
+    &nbsp;
+
+    ![Input Command](https://s3.amazonaws.com/docs-assets/gs-build-input-save.png "Input Command")
+
+    &nbsp;
 
 3.    Click on the + button to add an operation.  Paste the following `convert` step into the Command Bar to convert the unstructured text into a table:
 
