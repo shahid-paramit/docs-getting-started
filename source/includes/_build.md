@@ -65,7 +65,7 @@ Now, let's add some pipe steps.  We'll add `input`, `convert`, `merge`, `select`
 
     &nbsp;
 
-    ![Input Command](https://s3.amazonaws.com/docs-assets/gs-build-input.png "Input Command") TODO: change image
+    ![Input Command](https://s3.amazonaws.com/docs-assets/gs-build-input2.png "Input Command")
 
     &nbsp;
 
@@ -73,7 +73,7 @@ Now, let's add some pipe steps.  We'll add `input`, `convert`, `merge`, `select`
 
     &nbsp;
 
-    ![Input Command](https://s3.amazonaws.com/docs-assets/gs-build-input-save.png "Input Command") TODO: change image
+    ![Input Command](https://s3.amazonaws.com/docs-assets/gs-build-input-save2.png "Input Command")
 
     &nbsp;
 
