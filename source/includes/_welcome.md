@@ -17,9 +17,9 @@ Once you've built a pipe, you can run it manually from within the application, f
 
 In this getting started guide, we'll show you how to:
 
-* [Run an existing pipe]() TODO;
-* [Build and run a new pipe]()
-* [Run a pipe from the command line]()
+* [Run an existing pipe](#running-a-pipe) TODO;
+* [Build and run a new pipe](#building-a-pipe)
+* [Run a pipe from the command line](#using-the-api)
 * [Run a pipe from an API]()
 
 When you're ready to start building pipes, here are some handy reference guides:

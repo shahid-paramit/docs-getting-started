@@ -1,8 +1,8 @@
 # Running a Pipe
 
-Within the web app, you can run a pipe by simply clicking on the Run Pipe button at the top-right of the [pipe builder](https://www.flex.io/docs/web-app/#building-and-running-a-pipe "Pipe Builder").
+Within the [Web App](https://www.flex.io/docs/web-app/), you can run a pipe by simply clicking on the Run Pipe button at the top-right of the [pipe builder](https://www.flex.io/docs/web-app/#building-and-running-a-pipe "Pipe Builder").
 
-![New Pipe Button](https://s3.amazonaws.com/docs-assets/gs-run-button.png "New Pipe Button")
+![Run Pipe Button](https://s3.amazonaws.com/docs-assets/gs-run-button.png "Run Pipe Button")
 
 If the pipe is public, you can open the pipe and run it directly; if a pipe is private, you have to sign in to your account to run it.
 
