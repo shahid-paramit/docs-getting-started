@@ -73,7 +73,7 @@ Now, let's add some pipe steps.  We'll add `input`, `convert`, `merge`, `select`
 
     &nbsp;
 
-    ![Input Command](https://s3.amazonaws.com/docs-assets/gs-build-input-save.png "Input Command")
+    ![Input Command](https://s3.amazonaws.com/docs-assets/gs-build-input-save.png "Input Command") TODO: change image
 
     &nbsp;
 
