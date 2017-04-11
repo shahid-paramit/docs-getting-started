@@ -127,6 +127,12 @@ under the License.
       ga('create', 'UA-52094272-1', 'auto');
       ga('send', 'pageview');
 
+      // This does hash-click tracking (inspired by http://stackoverflow.com/a/4813223)
+      $(document).ready(function() {
+        $('.tocify-item a').on('click', function(){
+          ga('send', 'pageview', {'page': location.pathname + location.search  + location.hash});
+        });
+      });
     </script>
   </body>
 </html>
