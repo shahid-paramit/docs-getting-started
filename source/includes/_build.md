@@ -31,7 +31,6 @@ Let's start by creating a new pipe.
 
     &nbsp;
 
-
 4.    Click the Create Pipe button and you will be taken to the pipe builder Overview tab.  The Pipe Overview is where you can set up your input and ouput and see a summary of your pipe steps.  If you click to the Pipe Builder tab you can view, add and edit processing steps.
 
     &nbsp;
@@ -43,9 +42,9 @@ Let's start by creating a new pipe.
 
 ##### Build a Pipe
 
-Now, let's add some pipe steps.  We'll add `input`, `convert`, `merge`, `select`, `rename`, and `sort` steps to demonstrate.
+Now, let's add some pipe steps.  We'll add `input`, `convert`, `merge`, `select`, `rename`, and `sort` steps to demonstrate.  Normally, you can set up your input and output in the overview tab.  However, for this example, we'll take a command-driven approach for all steps in the pipe.
 
-1.    Click the 'Add Input' tile.  A dialog will appear to help you add an input.  You could use the dialog to get started, but, for now, click Cancel.  Then, in the command bar, paste in the following `input` command:
+1.    On to top-navigation bar, click the Pipe Builder tab and you will be taken to the pipe step view.  Click the "Add a Step" button and an untitled step will appear, ready for your command. Then, in the command bar, paste in the following `input` command:
 
     &nbsp;
 
@@ -62,7 +61,7 @@ Now, let's add some pipe steps.  We'll add `input`, `convert`, `merge`, `select`
 
     &nbsp;
 
-2.    Click the Save button.  This will run the input command and provide you a preview of the api json.
+2.    Click the Save Changes button.  This will save your step, but not run your pipe.
 
     &nbsp;
 
@@ -70,7 +69,16 @@ Now, let's add some pipe steps.  We'll add `input`, `convert`, `merge`, `select`
 
     &nbsp;
 
-3.    Click on the + button to add another step.  Paste the following `convert` command into the Command Bar to convert the unstructured text into a table:
+3.    Click the Run button at the top right.  This will run the input command and provide you a preview of the api json.  As you build the pipe, you can choose when to refresh your previews by re-running.
+
+    &nbsp;
+
+    ![Input Command](https://s3.amazonaws.com/docs-assets/gs-build-input-run2.png "Input Command")
+
+    &nbsp;
+
+
+4.    Click on the + button at the left to add another step.  Paste the following `convert` command into the Command Bar to convert the unstructured text into a table and click Save Changes:
 
     &nbsp;
 
@@ -80,9 +88,9 @@ Now, let's add some pipe steps.  We'll add `input`, `convert`, `merge`, `select`
 
     &nbsp;
 
-4.    Click the Save button to run the conversion command.  You will see a table in the preview.
+5.    If you choose to click the Run button, you will see a table in the preview.
 
-5.    Click on the + button to add another step.  Paste the following `merge` command into the Command Bar to combine the separate tables from the previous step into one table:
+6.    Click on the + button to add another step.  Paste the following `merge` command into the Command Bar to combine the separate tables from the previous step into one table and click Save Changes:
 
     &nbsp;
 
@@ -92,9 +100,9 @@ Now, let's add some pipe steps.  We'll add `input`, `convert`, `merge`, `select`
 
     &nbsp;
 
-6.    Click the Save button to run the merge command.  You will see a combined table in the preview.
+7.    If you choose to click the Run button, you will see a combined table in the preview.
 
-7.    Click on the + button to add another step.  Paste the following `select` command into the Command Bar to reduce the number of fields down to a limited set:
+8.    Click on the + button to add another step.  Paste the following `select` command into the Command Bar to reduce the number of fields down to a limited set and select Save Changes:
 
     &nbsp;
 
@@ -104,9 +112,9 @@ Now, let's add some pipe steps.  We'll add `input`, `convert`, `merge`, `select`
 
     &nbsp;
 
-8.    Click the Save button to run the select command.  The table in the preview will now populate with only the selected fields.
+9.    If you choose to click the Run button, you will see a preview populated with only the selected fields.
 
-9.    Click on the + button to add another step.  Paste the following `rename` command into the Command Bar to rename the columns:
+10.    Click on the + button to add another step.  Paste the following `rename` command into the Command Bar to rename the columns and select Save Changes:
 
     &nbsp;
 
@@ -116,9 +124,9 @@ Now, let's add some pipe steps.  We'll add `input`, `convert`, `merge`, `select`
 
     &nbsp;
 
-10.    Click the Save button to run the rename command.  The table in the preview will now populate with the renamed fields.
+11.    If you choose to click the Run button, you will see a preview populated with the renamed fields.
 
-11.    Click on the + button to add another step.  Paste the following `sort` command into the Command Bar to sort the table:
+12.    Click on the + button to add another step.  Paste the following `sort` command into the Command Bar to sort the table and click Save Changes:
 
     &nbsp;
 
@@ -128,8 +136,8 @@ Now, let's add some pipe steps.  We'll add `input`, `convert`, `merge`, `select`
 
     &nbsp;
 
-12.    Click the Save button to run the sort command.  The table in the preview will now populate with the sorted results.
+13.    Click the Run button to refresh your pipe.  The table in the preview will now populate with the sorted results.
 
-At this point, you can keep adding steps to build up the pipe logic; you can also edit a step by changing the command and pressing the Save button.  To remove a step, click on the 'X' in the upper right of any tile.  If you add steps between other steps and click Save, the pipe will only run to that point.  Click the Run Pipe button to refresh your pipe.
+At this point, you can keep adding steps to build up the pipe logic; you can also edit a step by changing the command and pressing the Save Changes button.  To remove a step, hover over the tile next to the step and an 'X' will appear, then click to delete.   Inputs and outputs may also be added directly in the pipe overview tab.
 
 Please see the [full pipe documentation](https://www.flex.io/docs/web-app/#pipes) for further details, along with all [command](https://www.flex.io/docs/web-app/#command-bar-operations) and [function](https://www.flex.io/docs/web-app/#functions-and-syntax) syntax.
