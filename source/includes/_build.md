@@ -1,6 +1,6 @@
 # Building a pipe
 
-You can build a pipe in the Web App using the Pipe Builder.  A longer walkthrough can be found in the [Web App Documentation](https://www.flex.io/docs/web-app/#building-and-running-a-pipe).
+You can build a pipe in the Web App using the Pipe Builder.  A longer walkthrough can be found in the [Web App Documentation](https://www.flex.io/docs/web-app/#building-and-running-a-pipe).  Further, a [video detailing the process can be found on YouTube here](https://www.youtube.com/watch?v=enybDpEh-2U).
 
 For this tutorial, we'll start with a blank pipe and then add an input and a few other steps.
 
@@ -31,15 +31,8 @@ Let's start by creating a new pipe.
 
     &nbsp;
 
-4.    Click on the 'Blank Pipe' icon and then click the Create Pipe button.
 
-    &nbsp;
-
-    ![New Pipe Entry](https://s3.amazonaws.com/docs-assets/gs-build-new-pipe.png "New Pipe Entry")
-
-    &nbsp;
-
-5.    Double-click on the Pipe to open the Pipe Builder.
+4.    Click the Create Pipe button and you will be taken to the pipe builder Overview tab.  The Pipe Overview is where you can set up your input and ouput and see a summary of your pipe steps.  If you click to the Pipe Builder tab you can view, add and edit processing steps.
 
     &nbsp;
 
