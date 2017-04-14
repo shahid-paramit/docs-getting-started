@@ -234,10 +234,10 @@
 
 <h5 id="build-a-pipe">Build a Pipe</h5>
 
-<p>Now, let&rsquo;s add some pipe steps.  We&rsquo;ll add <code class="prettyprint">input</code>, <code class="prettyprint">convert</code>, <code class="prettyprint">merge</code>, <code class="prettyprint">select</code>, <code class="prettyprint">rename</code>, and <code class="prettyprint">sort</code> steps to demonstrate.</p>
+<p>Now, let&rsquo;s add some pipe steps.  We&rsquo;ll add <code class="prettyprint">input</code>, <code class="prettyprint">convert</code>, <code class="prettyprint">merge</code>, <code class="prettyprint">select</code>, <code class="prettyprint">rename</code>, and <code class="prettyprint">sort</code> steps to demonstrate.  Normally, you can set up your input and output in the overview tab.  However, for this example, we&rsquo;ll take a command-driven approach for all steps in the pipe.</p>
 
 <ol>
-<li><p>Click the &lsquo;Add Input&rsquo; tile.  A dialog will appear to help you add an input.  You could use the dialog to get started, but, for now, click Cancel.  Then, in the command bar, paste in the following <code class="prettyprint">input</code> command:</p>
+<li><p>On to top-navigation bar, click the Pipe Builder tab and you will be taken to the pipe step view.  Click the &ldquo;Add a Step&rdquo; button and an untitled step will appear, ready for your command. Then, in the command bar, paste in the following <code class="prettyprint">input</code> command:</p>
 
 <p>&nbsp;</p>
 <pre class="highlight plaintext"><code>input file: https://api.github.com/repos/flexiodata/docs-web-app/commits =&gt; docs-web-app-commits, https://api.github.com/repos/flexiodata/docs-getting-started/commits =&gt; docs-getting-started-commits, https://api.github.com/repos/flexiodata/docs-api/commits =&gt; docs-api-commits
@@ -249,51 +249,58 @@
 <p><img src="https://s3.amazonaws.com/docs-assets/gs-build-input2.png" title="Input Command" alt="Input Command" /></p>
 
 <p>&nbsp;</p></li>
-<li><p>Click the Save button.  This will run the input command and provide you a preview of the api json.</p>
+<li><p>Click the Save Changes button.  This will save your step, but not run your pipe.</p>
 
 <p>&nbsp;</p>
 
 <p><img src="https://s3.amazonaws.com/docs-assets/gs-build-input-save2.png" title="Input Command" alt="Input Command" /></p>
 
 <p>&nbsp;</p></li>
-<li><p>Click on the + button to add another step.  Paste the following <code class="prettyprint">convert</code> command into the Command Bar to convert the unstructured text into a table:</p>
+<li><p>Click the Run button at the top right.  This will run the input command and provide you a preview of the api json.  As you build the pipe, you can choose when to refresh your previews by re-running.</p>
+
+<p>&nbsp;</p>
+
+<p><img src="https://s3.amazonaws.com/docs-assets/gs-build-input-run2.png" title="Input Command" alt="Input Command" /></p>
+
+<p>&nbsp;</p></li>
+<li><p>Click on the + button at the left to add another step.  Paste the following <code class="prettyprint">convert</code> command into the Command Bar to convert the unstructured text into a table and click Save Changes:</p>
 
 <p>&nbsp;</p>
 <pre class="highlight plaintext"><code>convert to: table
 </code></pre>
 <p>&nbsp;</p></li>
-<li><p>Click the Save button to run the conversion command.  You will see a table in the preview.</p></li>
-<li><p>Click on the + button to add another step.  Paste the following <code class="prettyprint">merge</code> command into the Command Bar to combine the separate tables from the previous step into one table:</p>
+<li><p>If you choose to click the Run button, you will see a table in the preview.</p></li>
+<li><p>Click on the + button to add another step.  Paste the following <code class="prettyprint">merge</code> command into the Command Bar to combine the separate tables from the previous step into one table and click Save Changes:</p>
 
 <p>&nbsp;</p>
 <pre class="highlight plaintext"><code>merge
 </code></pre>
 <p>&nbsp;</p></li>
-<li><p>Click the Save button to run the merge command.  You will see a combined table in the preview.</p></li>
-<li><p>Click on the + button to add another step.  Paste the following <code class="prettyprint">select</code> command into the Command Bar to reduce the number of fields down to a limited set:</p>
+<li><p>If you choose to click the Run button, you will see a combined table in the preview.</p></li>
+<li><p>Click on the + button to add another step.  Paste the following <code class="prettyprint">select</code> command into the Command Bar to reduce the number of fields down to a limited set and select Save Changes:</p>
 
 <p>&nbsp;</p>
 <pre class="highlight plaintext"><code>select col: commit.author.date, commit.author.name, commit.author.email, commit.committer.name, commit.committer.email, commit.message
 </code></pre>
 <p>&nbsp;</p></li>
-<li><p>Click the Save button to run the select command.  The table in the preview will now populate with only the selected fields.</p></li>
-<li><p>Click on the + button to add another step.  Paste the following <code class="prettyprint">rename</code> command into the Command Bar to rename the columns:</p>
+<li><p>If you choose to click the Run button, you will see a preview populated with only the selected fields.</p></li>
+<li><p>Click on the + button to add another step.  Paste the following <code class="prettyprint">rename</code> command into the Command Bar to rename the columns and select Save Changes:</p>
 
 <p>&nbsp;</p>
 <pre class="highlight plaintext"><code>rename col: commit.author.date=&gt;author_date, commit.author.name=&gt;author_name, commit.author.email=&gt;author_email, commit.committer.name=&gt;committer_name, commit.committer.email=&gt;committer_email, commit.message=&gt;commit_message
 </code></pre>
 <p>&nbsp;</p></li>
-<li><p>Click the Save button to run the rename command.  The table in the preview will now populate with the renamed fields.</p></li>
-<li><p>Click on the + button to add another step.  Paste the following <code class="prettyprint">sort</code> command into the Command Bar to sort the table:</p>
+<li><p>If you choose to click the Run button, you will see a preview populated with the renamed fields.</p></li>
+<li><p>Click on the + button to add another step.  Paste the following <code class="prettyprint">sort</code> command into the Command Bar to sort the table and click Save Changes:</p>
 
 <p>&nbsp;</p>
 <pre class="highlight plaintext"><code>sort col: author_date desc
 </code></pre>
 <p>&nbsp;</p></li>
-<li><p>Click the Save button to run the sort command.  The table in the preview will now populate with the sorted results.</p></li>
+<li><p>Click the Run button to refresh your pipe.  The table in the preview will now populate with the sorted results.</p></li>
 </ol>
 
-<p>At this point, you can keep adding steps to build up the pipe logic; you can also edit a step by changing the command and pressing the Save button.  To remove a step, click on the &#39;X&rsquo; in the upper right of any tile.  If you add steps between other steps and click Save, the pipe will only run to that point.  Click the Run Pipe button to refresh your pipe.</p>
+<p>At this point, you can keep adding steps to build up the pipe logic; you can also edit a step by changing the command and pressing the Save Changes button.  To remove a step, hover over the tile next to the step and an &lsquo;X&rsquo; will appear, then click to delete.   Inputs and outputs may also be added directly in the pipe overview tab.</p>
 
 <p>Please see the <a href="https://www.flex.io/docs/web-app/#pipes">full pipe documentation</a> for further details, along with all <a href="https://www.flex.io/docs/web-app/#command-bar-operations">command</a> and <a href="https://www.flex.io/docs/web-app/#functions-and-syntax">function</a> syntax.</p>
 
