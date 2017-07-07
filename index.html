@@ -2,23 +2,43 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Getting Started with Flex.io</title>
+    <meta name="description" content="Getting Started with Flex.io">
 
-    <meta content="https://www.flex.io/docs/getting-started" property="og:url">
-    <meta content="Getting Started with Flex.io" property="og:title">
-    <meta content="Getting Started with Flex.io" name="twitter:title">
-    <meta content="The quick start guide for using Flex.io in the web app, Command Line Interface (CLI) and API." property="og:description">
-    <meta content="The quick start guide for using Flex.io in the web app, Command Line Interface (CLI) and API." name="description">
-    <meta content="The quick start guide for using Flex.io in the web app, Command Line Interface (CLI) and API." name="twitter:description">
-    <meta content="Flex.io" property="og:site_name">
+    <link rel="icon" href="https://www.flex.io/assets/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="https://www.flex.io/assets/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="https://www.flex.io/assets/favicon-96x96.png" type="image/png" sizes="96x96">
+    <link rel="apple-touch-icon" href="https://www.flex.io/assets/apple-touch-icon.png">
 
-    <link rel="apple-touch-icon" href="https://s3.amazonaws.com/flexio-app-assets/apple-touch-icon.png">
-    <link rel="icon" href="https://s3.amazonaws.com/flexio-app-assets/favicon.png">
+    <!-- facebook -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Getting Started with Flex.io">
+    <meta property="og:description" content="The quick start guide for using Flex.io in the web app, Command Line Interface (CLI) and API.">
+    <meta property="og:url" content="https://www.flex.io/docs/getting-started">
+    <meta property="og:site_name" content="Flex.io">
+    <meta property="og:image" content="https://s3.amazonaws.com/flexio-wp/wp-content/uploads/2014/09/logo-flexio-tm-navbar.png">
 
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="The quick start guide for using Flex.io in the web app, Command Line Interface (CLI) and API.">
+    <meta name="twitter:title" content="Getting Started with Flex.io">
+    <meta name="twitter:site" content="@flexiodata">
+    <meta name="twitter:image" content="https://s3.amazonaws.com/flexio-wp/wp-content/uploads/2014/09/logo-flexio-tm-navbar.png">
+    <meta name="twitter:creator" content="@flexiodata">
+
+    <!-- google plus -->
+    <link rel="publisher" href="https://plus.google.com/+flexiodata">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.6.2/tachyons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.6.1/tachyons.min.css" integrity="sha256-eu1dpzpUytdOAUmB67Qi3mBb6HFjruP8BoAzk4lKiSc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.flex.io/css/style.css" rel="stylesheet">
+
     <style>
       .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
@@ -99,35 +119,50 @@
   color: #a6e22e;
 }
     </style>
-    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
-    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
-      <script src="javascripts/all_nosearch.js"></script>
+    <link href="css/screen.css" rel="stylesheet" media="screen" />
+    <link href="css/print.css" rel="stylesheet" media="print" />
+      <script src="js/all_nosearch.js"></script>
+
+    <link rel="canonical" href="https://www.flex.io/docs/getting-started">
+
+    <script type="text/javascript" async="" src="https://cdn.segment.com/analytics.js/v1/xQygAfhdyP1wR682k7LZnpz3RTnhpvd3/analytics.min.js"></script>
   </head>
 
   <body class="index" data-languages="[]">
-    <div class="css-header fixed top-0 w-100 flex flex-row items-center bg-white bb b--black-10" style="padding: 10px 40px 10px 10px">
-      <div class="flex-none">
-        <a href="#" id="nav-button" class="db">
-          <span>
-            <img src="images/navbar.png" alt="Navbar" />
-          </span>
+
+    <nav
+      class="fixed top-0 w-100 flex flex-row items-center ph3 ph4-l bg-white bb b--black-10"
+      style="height: 71px; z-index: 100"
+    >
+      <div class="flex-fill flex flex-row items-center truncate">
+        <a href="/" class="dib" style="padding: 20px 0; height: 70px">
+          <img src="https://www.flex.io/assets/logo-flexio-navbar.png" alt="Flex.io logo" class="w-auto h-100 db">
         </a>
       </div>
-      <div class="flex-none">
-        <a href="/"><img src="logo.png" class="db" alt="Logo" /></a>
+      <div class="db dn-l h-100">
+        <div class="flex flex-row items-center h-100">
+          <a href="#" class="css-nav-link" style="border: 0"><i class="material-icons" style="font-size: 33px">menu</i></a>
+        </div>
       </div>
-      <div class="flex-fill">&nbsp;</div>
-      <div class="flex-none">
-        <a href="/docs" class="mh2 ph1 min-w5 ttu css-nav-link">Docs Home</a>
-        <span class="mh2 ph1 min-w5 ttu css-nav-link css-nav-active">Getting Started</span>
-        <a href="../web-app/" class="mh2 ph1 min-w5 ttu css-nav-link">Web App</a>
-        <a href="../api/" class="mh2 ph1 min-w5 ttu css-nav-link">API Reference</a>
+      <div class="dn db-l h-100">
+        <div class="flex flex-row items-center h-100">
+          <a href="/use-cases" class="mh2 min-w5 ttu css-nav-link">Use Cases</a>
+          <a href="/templates" class="mh2 min-w5 ttu css-nav-link">Templates</a>
+          <a href="/docs" class="mh2 min-w5 ttu css-nav-link css-nav-active">Docs</a>
+          <a href="/blog" class="mh2 min-w5 ttu css-nav-link">Blog</a>
+          <a href="/app/signin" class="mh2 min-w5 ttu css-nav-link">Sign In</a>
+          <a href="/app/signup" class="ml2 link no-underline f6 f6-ns ttu b br1 white bg-orange darken-10 ph2 ph3-ns pv2 css-nav-cta">
+            Sign Up
+          </a>
+        </div>
       </div>
-    </div>
+    </nav>
+
     <div class="tocify-wrapper br b--black-10">
       <div id="toc">
       </div>
     </div>
+
     <div class="page-wrapper single-column">
       <div class="dark-box"></div>
       <div class="content">
