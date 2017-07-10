@@ -613,12 +613,12 @@ ul {
   */
 
   code {
-    display: inline-block;
+    display: inline;
     border-radius: 3px;
     background-color: #f6f8fa;
     font-size: 12px;
-    margin: -4px;
-    padding: 16px;
+    padding: 4px;
+    line-height: 20px;
     overflow: auto;
     @extend %break-words;
     @extend %code-font;
@@ -737,7 +737,8 @@ ul {
     @extend %code-font;
 
     code {
-      background-color: rgba(0,0,0,0.06);
+      //background-color: rgba(0,0,0,0.06);
+      background-color: transparent;
       padding: 3px;
       border-radius: 3px;
       @extend %break-words;
@@ -908,6 +909,10 @@ ul {
       }
     }
   }
+}
+
+.highlight {
+  overflow: auto;
 }
 
 .highlight .c,

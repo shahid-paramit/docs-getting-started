@@ -98,7 +98,7 @@ $lang-selector-font-size: $h3-font-size;
 // FONTS
 ////////////////////
 %default-font {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
 }
 
@@ -108,8 +108,8 @@ $lang-selector-font-size: $h3-font-size;
 }
 
 %code-font {
-  font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
-  font-size: 13px;
+  font-family: Consolas, monaco, monospace;
+  font-size: 12px;
   line-height: 1.5;
 }
 
