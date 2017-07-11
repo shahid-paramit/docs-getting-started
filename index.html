@@ -129,35 +129,51 @@
   </head>
 
   <body class="index" data-languages="[]">
-
-    <nav
-      class="fixed top-0 w-100 flex flex-row items-center ph3 ph4-l bg-white bb b--black-10"
-      style="height: 71px; z-index: 100"
-    >
-      <div class="flex-fill flex flex-row items-center truncate">
-        <a href="/" class="dib" style="padding: 20px 0; height: 70px">
-          <img src="https://www.flex.io/assets/logo-flexio-navbar.png" alt="Flex.io logo" class="db">
-        </a>
-      </div>
-      <div class="db dn-l h-100">
-        <div class="flex flex-row items-center h-100">
-          <a href="#" class="css-nav-link" style="border: 0"><i class="material-icons" style="font-size: 33px">menu</i></a>
-        </div>
-      </div>
-      <div class="dn db-l h-100">
-        <div class="flex flex-row items-center h-100">
-          <a href="/docs" class="mh2 min-w5 ttu css-nav-link">Docs Home</a>
-          <a href="/docs/getting-started" class="mh2 min-w5 ttu css-nav-link css-nav-active">Getting Started</a>
-          <a href="/docs/web-app" class="mh2 min-w5 ttu css-nav-link">Web App</a>
-          <a href="/docs/api" class="mh2 min-w5 ttu css-nav-link">API Reference</a>
-          <a href="/app/signin" class="mh2 min-w5 ttu css-nav-link">Sign In</a>
-          <a href="/app/signup" class="ml2 link no-underline f6 f6-ns ttu b br1 white bg-orange darken-10 ph2 ph3-ns pv2 css-nav-cta">
-            Sign Up
+    <div class="fixed top-0 w-100 bg-white bb b--black-10" style="height: 71px; z-index: 100">
+      <nav
+        class="flex flex-row items-center ph3 ph4-l"
+        style="height: 70px"
+      >
+        <div class="flex flex-row items-center truncate">
+          <a href="/" class="dib" style="padding: 20px 0; height: 70px">
+            <img src="https://www.flex.io/assets/logo-flexio-navbar.png" alt="Flex.io logo" class="db">
           </a>
         </div>
-      </div>
-    </nav>
-
+        <div class="flex-fill flex flex-row justify-end items-center h-100">
+          <a href="/docs" class="mh2 min-w5 ttu css-nav-link dn db-l">Docs Home</a>
+          <a href="/docs/getting-started" class="mh2 min-w5 ttu css-nav-link dn db-l css-nav-active">Getting Started</a>
+          <a href="/docs/web-app" class="mh2 min-w5 ttu css-nav-link dn db-l">Web App</a>
+          <a href="/docs/api" class="mh2 min-w5 ttu css-nav-link dn db-l">API Reference</a>
+          <a href="/app/signin" class="mh2 min-w5 ttu css-nav-link dn db-ns ">Sign In</a>
+          <a href="/app/signup" class="ml2 link no-underline f6 f6-ns ttu b br1 white bg-orange darken-10 ph2 ph3-ns pv2 css-nav-cta dn db-ns ">
+            Sign Up
+          </a>
+          <a href="#" class="db dn-l css-nav-link js-nav-dropdown" style="border: 0; margin: 0 4px 0 16px">
+            <i class="material-icons" style="font-size: 24px">menu</i>
+          </a>
+          <ul class="fixed absolute--fill pa4 list bg-white dn" style="top: 70px; z-index: 101" id="menu-1">
+            <li class="tc bg-white hover-bg-near-white ttu br1">
+              <a href="/docs" class="db pa2 fw6 mid-gray bg-near-white no-underline darken-10">Docs Home</a>
+            </li>
+            <li class="tc bg-white hover-bg-near-white ttu br1">
+              <a href="/docs/getting-started" class="db pa2 fw6 mid-gray bg-near-white no-underline darken-10">Getting Started</a>
+            </li>
+            <li class="tc bg-white hover-bg-near-white ttu br1">
+              <a href="/docs/web-app" class="db pa2 fw6 mid-gray bg-near-white no-underline darken-10">Web App</a>
+            </li>
+            <li class="tc bg-white hover-bg-near-white ttu br1">
+              <a href="/docs/api" class="db pa2 fw6 mid-gray bg-near-white no-underline darken-10">API Reference</a>
+            </li>
+            <li class="tc bg-white hover-bg-near-white db dn-ns ttu br1">
+              <a href="app/signin" class="db pa2 fw6 mid-gray bg-near-white no-underline darken-10">Sign In</a>
+            </li>
+            <li class="tc bg-white hover-bg-near-white db dn-ns ttu br1">
+              <a href="app/signup" class="db pa2 fw6 mid-gray bg-near-white no-underline darken-10">Sign Up</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
     <div class="tocify-wrapper br b--black-10">
       <div id="toc">
       </div>
@@ -517,6 +533,7 @@ $ echo Hello, World | flexio pipes run &lt;pipe-alias&gt;
       </div>
     </div>
 
+    <script type="text/javascript" src="https://www.flex.io/js/nav-dropdown.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
